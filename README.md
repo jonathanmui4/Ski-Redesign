@@ -16,3 +16,20 @@ or
 npm run dev
 ```
 
+# Building Project and run production server
+## Yarn method
+```
+yarn build
+```
+2.
+```
+yarn preview
+```
+## NPM method
+```
+npm run build
+```
+2.
+```
+npm run preview
+```
