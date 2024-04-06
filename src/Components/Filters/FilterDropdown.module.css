@@ -12,6 +12,8 @@
   .label {
     line-height: 20px;
     font-weight: 500;
+    display: inline-flex;
+    flex: 1;
   }
   .icon {
     width: 18px;
@@ -22,7 +24,7 @@
   }
   .button {
     border-radius: var(--br-5xs);
-    background-color: var(--hover);
+    background-color: var(--white);
     border: 1px solid var(--stroke);
     display: flex;
     flex-direction: row;
@@ -30,6 +32,10 @@
     justify-content: flex-start;
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-5xs);
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: var(--hover);
   }
   .rating {
     position: relative;
@@ -46,6 +52,10 @@
     align-self: stretch;
     flex-direction: row;
     padding: var(--padding-5xs) var(--padding-base);
+    cursor: pointer;
+  }
+  .filterDropdownOptionItem:hover {
+    background-color: var(--hover);
   }
   .filterDropdown,
   .listOfItems {
