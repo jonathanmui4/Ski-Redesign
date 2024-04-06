@@ -1,30 +1,22 @@
 import styles from "./ResultCard1ColumndiffArra.module.css";
-import StarRatings from "react-star-ratings";
 
 const ResultCard1ColumndiffArra = () => {
+    const imgUrl = "resorts/Resort1.jpeg";
     return (
         <div className={styles.resultCard1ColumndiffArra}>
-            <div className={styles.frame}>
-                <img
-                    className={styles.frameIcon}
-                    alt="Resort Image"
-                    src="/frame.svg"
-                />
-            </div>
+            <div
+                className={styles.frame}
+                style={{
+                    backgroundImage: `url(${imgUrl})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+            />
             <div className={styles.frame1}>
                 <div className={styles.frameInner}>
                     <div className={styles.starRatingsParent}>
                         <div className={styles.starRatings}>
                             <div className={styles.frame2}>
-                                <div className={styles.div}>
-                                    <StarRatings
-                                        rating={4.5}
-                                        starDimension="16px"
-                                        starSpacing="1px"
-                                        numberOfStars={5}
-                                        starRatedColor="red"
-                                    />
-                                </div>
                                 <div className={styles.div}>(4.5)</div>
                             </div>
                         </div>

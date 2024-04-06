@@ -5,16 +5,6 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.div,
-.frameIcon {
-  position: absolute;
-  left: 0;
-}
-.frameIcon {
-  top: 6px;
-  width: 98px;
-  height: 15px;
-}
 .div {
   top: 0;
   line-height: 20px;
@@ -122,7 +112,7 @@
   width: 304px;
   height: 64px;
   text-align: center;
-  color: var(--color-white);
+  color: #FFFFFF;
 }
 .starRatingsParent {
   width: 892px;
