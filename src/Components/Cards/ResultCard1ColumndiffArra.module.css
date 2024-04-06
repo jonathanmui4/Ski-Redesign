@@ -6,6 +6,9 @@
   flex-shrink: 0;
 }
 .div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
   top: 0;
   line-height: 20px;
 }
@@ -13,8 +16,8 @@
 .starRatings {
   position: absolute;
   top: 4px;
-  left: 106px;
-  width: 30px;
+  left: 0;
+  width: 200px;
   height: 20px;
 }
 .starRatings {

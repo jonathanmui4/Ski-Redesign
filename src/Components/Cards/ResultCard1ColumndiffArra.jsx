@@ -1,7 +1,13 @@
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard1ColumndiffArra.module.css";
 
 const ResultCard1ColumndiffArra = () => {
     const imgUrl = "resorts/Resort1.jpeg";
+    const rating = 4.5;
+    // Calculate number of full stars
+    const fullStars = Math.floor(rating);
+    // Check if there's a half star
+    const hasHalfStar = rating - fullStars >= 0.5;
     return (
         <div className={styles.resultCard1ColumndiffArra}>
             <div
@@ -17,7 +23,39 @@ const ResultCard1ColumndiffArra = () => {
                     <div className={styles.starRatingsParent}>
                         <div className={styles.starRatings}>
                             <div className={styles.frame2}>
-                                <div className={styles.div}>(4.5)</div>
+                                <div className={styles.div}>
+                                    <div>
+                                        {[...Array(fullStars)].map(
+                                            (_, index) => (
+                                                <FaStar
+                                                    size={15}
+                                                    key={index}
+                                                    color="facc15"
+                                                />
+                                            )
+                                        )}
+                                        {hasHalfStar && (
+                                            <FaStarHalfAlt
+                                                size={15}
+                                                color="facc15"
+                                            />
+                                        )}
+                                        {[
+                                            ...Array(
+                                                5 -
+                                                    fullStars -
+                                                    (hasHalfStar ? 1 : 0)
+                                            ),
+                                        ].map((_, index) => (
+                                            <FaRegStar
+                                                size={15}
+                                                key={index}
+                                                color="facc15"
+                                            />
+                                        ))}
+                                    </div>
+                                    <div>({rating})</div>
+                                </div>
                             </div>
                         </div>
                         <div className={styles.frame3}>
