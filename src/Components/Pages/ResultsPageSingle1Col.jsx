@@ -1,4 +1,5 @@
 import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
+import FilterDropdown from "../Filters/FilterDropdown";
 import styles from "./ResultsPageSingle1Col.module.css";
 
 const ResultsPageSingle1Col = () => {
@@ -8,43 +9,7 @@ const ResultsPageSingle1Col = () => {
                 <div className={styles.sortAndFilter}>
                     <div className={styles.frame}>
                         <div className={styles.filterByParent}>
-                            <div className={styles.filterBy}>Filter By</div>
-                            <div className={styles.filterDropdown}>
-                                <div className={styles.button}>
-                                    <div className={styles.label}>
-                                        Pick an option
-                                    </div>
-                                </div>
-                                <div className={styles.listOfItems}>
-                                    <div
-                                        className={
-                                            styles.filterDropdownOptionItem
-                                        }
-                                    >
-                                        <div className={styles.rating}>
-                                            Rating
-                                        </div>
-                                    </div>
-                                    <div
-                                        className={
-                                            styles.filterDropdownOptionItem
-                                        }
-                                    >
-                                        <div className={styles.rating}>
-                                            Price
-                                        </div>
-                                    </div>
-                                    <div
-                                        className={
-                                            styles.filterDropdownOptionItem
-                                        }
-                                    >
-                                        <div className={styles.rating}>
-                                            Slope Difficulty
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <FilterDropdown />
                         </div>
                     </div>
                     <div className={styles.searchButton}>

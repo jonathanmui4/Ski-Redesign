@@ -1,0 +1,67 @@
+.filterBy {
+    width: 288px;
+    line-height: 24px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .filterBy,
+  .icon,
+  .label {
+    position: relative;
+  }
+  .label {
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .button {
+    border-radius: var(--br-5xs);
+    background-color: var(--hover);
+    border: 1px solid var(--stroke);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-5xs) var(--padding-base);
+    gap: var(--gap-5xs);
+  }
+  .rating {
+    position: relative;
+    line-height: 20px;
+  }
+  .filterDropdown,
+  .filterDropdownOptionItem,
+  .listOfItems {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .filterDropdownOptionItem {
+    align-self: stretch;
+    flex-direction: row;
+    padding: var(--padding-5xs) var(--padding-base);
+  }
+  .filterDropdown,
+  .listOfItems {
+    border-radius: var(--br-5xs);
+    flex-direction: column;
+    gap: var(--gap-9xs);
+  }
+  .listOfItems {
+    align-self: stretch;
+    background-color: var(--white);
+    border: 1px solid var(--stroke);
+    padding: var(--padding-5xs) 0;
+    color: var(--black);
+  }
+  .filterDropdown {
+    width: 257px;
+    color: var(--primary);
+    font-family: var(--font-fira-sans);
+  }
