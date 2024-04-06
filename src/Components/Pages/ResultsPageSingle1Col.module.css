@@ -1,0 +1,516 @@
+.filterBy {
+    width: 288px;
+    line-height: 24px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .filterBy,
+  .icon,
+  .label {
+    position: relative;
+  }
+  .label {
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .button {
+    border-radius: var(--br-5xs);
+    background-color: var(--hover);
+    border: 1px solid var(--stroke);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-5xs) var(--padding-base);
+    gap: var(--gap-5xs);
+  }
+  .rating {
+    position: relative;
+    line-height: 20px;
+  }
+  .filterDropdown,
+  .filterDropdownOptionItem,
+  .listOfItems {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .filterDropdownOptionItem {
+    align-self: stretch;
+    flex-direction: row;
+    padding: var(--padding-5xs) var(--padding-base);
+  }
+  .filterDropdown,
+  .listOfItems {
+    border-radius: var(--br-5xs);
+    flex-direction: column;
+    gap: var(--gap-9xs);
+  }
+  .listOfItems {
+    align-self: stretch;
+    background-color: var(--white);
+    border: 1px solid var(--stroke);
+    padding: var(--padding-5xs) 0;
+    color: var(--black);
+  }
+  .filterDropdown {
+    width: 257px;
+    color: var(--primary);
+    font-family: var(--font-fira-sans);
+  }
+  .filterByParent {
+    height: 365px;
+    gap: 6px;
+  }
+  .filterByParent,
+  .frame {
+    width: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .search {
+    width: 53px;
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .searchButton {
+    width: 288px;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-gold);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs) 117px;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--color-darkslategray);
+  }
+  .sortAndFilter {
+    position: absolute;
+    top: 75px;
+    left: 23px;
+    height: 675px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+  }
+  .frameIcon {
+    align-self: stretch;
+    max-width: 100%;
+    overflow: hidden;
+    height: 224px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .div,
+  .frameIcon1 {
+    position: absolute;
+    left: 0;
+  }
+  .frameIcon1 {
+    top: 6px;
+    width: 98px;
+    height: 15px;
+  }
+  .div {
+    top: 0;
+    line-height: 20px;
+  }
+  .frame2,
+  .starRatings {
+    position: absolute;
+    top: 4px;
+    left: 106px;
+    width: 30px;
+    height: 20px;
+  }
+  .starRatings {
+    top: 0;
+    left: 0;
+    width: 133px;
+    height: 24px;
+    font-size: var(--font-size-sm);
+  }
+  .alpineDreamsResort {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  .frame3 {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 303px;
+    height: 28px;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-100);
+  }
+  .startingFrom299 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 24px;
+  }
+  .frame4 {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 303px;
+    height: 24px;
+  }
+  .beginner {
+    position: relative;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  .frame6,
+  .frame7,
+  .frame8 {
+    border-radius: var(--br-9980xl);
+    background-color: var(--color-cornflowerblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-9xs) var(--padding-xs);
+  }
+  .frame7,
+  .frame8 {
+    background-color: var(--color-mediumseagreen);
+  }
+  .frame8 {
+    background-color: var(--color-darkorange);
+    flex-wrap: wrap;
+    padding: var(--padding-9xs) var(--padding-2xs);
+  }
+  .frame5,
+  .viewDetails {
+    position: absolute;
+    display: flex;
+  }
+  .frame5 {
+    top: 100px;
+    left: 0;
+    width: 98px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-4xs);
+    font-size: var(--font-size-xs);
+    color: var(--white);
+  }
+  .viewDetails {
+    top: 8px;
+    left: 109px;
+    line-height: 24px;
+    align-items: center;
+    justify-content: center;
+    width: 86px;
+  }
+  .frame9 {
+    position: absolute;
+    top: 125px;
+    left: 588px;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-dodgerblue);
+    width: 304px;
+    height: 64px;
+    text-align: center;
+    color: var(--white);
+  }
+  .starRatingsParent {
+    width: 892px;
+    position: relative;
+    height: 189px;
+  }
+  .frameInner {
+    align-self: stretch;
+    flex: 1;
+  }
+  .frame1,
+  .frameInner,
+  .resultCard1ColumndiffArra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frame1 {
+    width: 924px;
+    height: 221px;
+    padding: var(--padding-base);
+    box-sizing: border-box;
+  }
+  .resultCard1ColumndiffArra {
+    border-radius: var(--br-5xs);
+    background-color: var(--white);
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1),
+      0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 0 0#000, 0 0 0#000;
+    overflow: hidden;
+  }
+  .cards,
+  .content {
+    position: absolute;
+  }
+  .cards {
+    top: 104px;
+    left: 336px;
+    width: 928px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    color: var(--color-dimgray);
+  }
+  .content {
+    width: 100%;
+    top: 57px;
+    right: 0;
+    left: 0;
+    height: 775px;
+    overflow-y: auto;
+  }
+  .search1 {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .searchWrapper {
+    position: absolute;
+    top: 0;
+    left: 816px;
+    border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+    background-color: var(--color-gold);
+    width: 112px;
+    height: 41px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    box-sizing: border-box;
+  }
+  .searchForSki {
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    line-height: 24px;
+    display: inline-block;
+    width: 788px;
+  }
+  .frame19,
+  .frame20 {
+    position: absolute;
+    height: 41px;
+  }
+  .frame20 {
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-sizing: border-box;
+    color: #b2b2b2;
+  }
+  .frame19 {
+    width: 72.5%;
+    top: 73px;
+    right: 1.25%;
+    left: 26.25%;
+    color: var(--color-darkslategray);
+  }
+  .skiresortLogoIcon {
+    width: 138px;
+    position: relative;
+    height: 37px;
+    object-fit: cover;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) 0;
+  }
+  .rectangle {
+    width: 43.1px;
+    position: relative;
+    background-color: var(--color-mediumslateblue);
+    height: 1.7px;
+  }
+  .borders,
+  .tab,
+  .tab2,
+  .tab3,
+  .tab4,
+  .tab5,
+  .tab6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .borders {
+    align-self: stretch;
+  }
+  .tab,
+  .tab2,
+  .tab3,
+  .tab4,
+  .tab5,
+  .tab6 {
+    padding: 0 var(--padding-11xs);
+    gap: var(--gap-3xs);
+  }
+  .tab {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 0;
+  }
+  .tab2,
+  .tab3,
+  .tab4,
+  .tab5,
+  .tab6 {
+    z-index: 1;
+  }
+  .tab3,
+  .tab4,
+  .tab5,
+  .tab6 {
+    z-index: 2;
+  }
+  .tab4,
+  .tab5,
+  .tab6 {
+    z-index: 3;
+  }
+  .tab5,
+  .tab6 {
+    z-index: 4;
+  }
+  .tab6 {
+    z-index: 5;
+  }
+  .frameItem {
+    width: 116px;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    left: -12px;
+    background: linear-gradient(
+      180deg,
+      rgba(9, 69, 129, 0.5) 45.5%,
+      rgba(255, 255, 255, 0.5)
+    );
+    height: 57px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 6;
+  }
+  .frame22,
+  .frame23 {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .frame23 {
+    height: 57px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    gap: 32px;
+  }
+  .frame22 {
+    gap: 30px;
+  }
+  .frame21,
+  .frame22,
+  .navigationBar {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .frame21 {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 var(--padding-3xs);
+  }
+  .navigationBar {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 640px);
+    background-color: #094581;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1),
+      0 0 0#000, 0 0 0#000;
+    width: 1280px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-size-sm);
+    color: var(--color-whitesmoke);
+  }
+  .ellipseIcon {
+    width: 30px;
+    position: relative;
+    height: 30px;
+    object-fit: cover;
+  }
+  .austria,
+  .vectorParent {
+    display: flex;
+    align-items: center;
+  }
+  .austria {
+    width: 146px;
+    position: relative;
+    line-height: 20px;
+    height: 27px;
+    flex-shrink: 0;
+  }
+  .vectorParent {
+    position: absolute;
+    top: 15px;
+    left: 1171px;
+    width: 118px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+    font-size: var(--font-size-sm);
+    color: var(--white);
+  }
+  .resultsPageSingle1Col {
+    width: 100%;
+    position: relative;
+    background-color: var(--white);
+    height: 832px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--black);
+    font-family: var(--font-roboto);
+  }
+  
