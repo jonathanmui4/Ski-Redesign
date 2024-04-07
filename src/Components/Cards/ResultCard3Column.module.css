@@ -1,6 +1,6 @@
 .frame {
     align-self: stretch;
-    background-color: var(--color-gray-200);
+    background-color: rgba(0, 0, 0, 0.25);
     height: 224px;
     overflow: hidden;
     flex-shrink: 0;
