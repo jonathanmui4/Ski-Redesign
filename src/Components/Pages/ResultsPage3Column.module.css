@@ -188,12 +188,9 @@
     top: 104px;
     left: 336px;
     width: 928px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-21xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--gap-21xl);
     font-size: var(--font-size-sm);
     color: var(--color-dimgray-100);
 }
