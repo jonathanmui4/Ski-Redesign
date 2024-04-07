@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import HelloWorld from "./Components/HelloWorld";
-import Home1 from "./Components/Pages/Home1";
-import ResultsPageSingle1Col from "./Components/Pages/ResultsPageSingle1Col";
+// import HelloWorld from "./Components/HelloWorld";
+import Home1 from "./components/Pages/HomePage/HomePage";
+import ResultsPageSingle1Col from "./components/Pages/ResultsPageSingle1Col";
 
 function App() {
     return (
