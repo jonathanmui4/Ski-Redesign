@@ -273,9 +273,10 @@
   }
   .teenyiconsdown-solid {
     width: 10px;
-    height: 10px;
+    height: 5px;
+    margin-top: -4px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: 0;
   }
   .t-e-x-t-search-label {

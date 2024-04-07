@@ -178,7 +178,9 @@
   font-weight: 500;
   font-family: inherit;
   /* display: inline-block; */
-  margin-bottom: 48px;
+  margin-top: -10%;
+  justify-content: center;
+  margin-right: 10%;
   min-width: 125px;
 }
 .frame-item {
@@ -218,10 +220,10 @@
   position: absolute;
   height: 100vh;
   top: 55px;
-  left: 800px;
+  right: 0;
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(4px);
-  width: 752px;
+  /* width: 752px; */
   overflow: visible;
   flex-direction: column;
   padding: 123px 57px 158px;
@@ -269,6 +271,5 @@
   }
   .best-ski-resort {
     font-size: var(--font-size-base);
-    line-height: 19px;
   }
 }

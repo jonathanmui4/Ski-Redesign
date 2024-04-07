@@ -1,6 +1,7 @@
 import "./FrameComponent1.css";
 import CountryImage from '../../../assets/Images/sg.png';
 import Logo from '../../../assets/Images/logo.png';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const FrameComponent1 = () => {
   return (
@@ -75,12 +76,9 @@ const FrameComponent1 = () => {
                 <b className="singapore">Singapore</b>
               </div>
               <div className="t-e-x-t-search-label">
-                <img
-                  className="teenyiconsdown-solid"
-                  loading="lazy"
-                  alt=""
-                  src="/teenyiconsdownsolid.svg"
-                />
+                <div className="teenyiconsdown-solid">
+                  <ArrowDropDownIcon fontSize="small" />
+                </div>
               </div>
             </div>
           </div>

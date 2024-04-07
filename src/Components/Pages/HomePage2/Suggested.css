@@ -242,7 +242,7 @@
 }
 .suggested {
   width: 423px;
-  overflow-x: auto;
+  overflow-x:scroll;
   flex-direction: row;
   gap: var(--gap-15xl);
   max-width: 100%;
