@@ -5,17 +5,10 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.div,
-.frameIcon {
-  position: absolute;
-  left: 0;
-}
-.frameIcon {
-  top: 6px;
-  width: 98px;
-  height: 15px;
-}
 .div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
   top: 0;
   line-height: 20px;
 }
@@ -23,8 +16,8 @@
 .starRatings {
   position: absolute;
   top: 4px;
-  left: 106px;
-  width: 30px;
+  left: 0;
+  width: 200px;
   height: 20px;
 }
 .starRatings {
@@ -103,7 +96,7 @@
   justify-content: flex-start;
   gap: 9px;
   font-size: var(--font-size-xs);
-  color: var(--color-white);
+  color: #FFFFFF;
 }
 .viewDetails {
   top: 8px;
@@ -122,7 +115,7 @@
   width: 304px;
   height: 64px;
   text-align: center;
-  color: var(--color-white);
+  color: #FFFFFF;
 }
 .starRatingsParent {
   width: 892px;
