@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import styles from "./FilterDropdown.module.css";
+import DropdownOptions from "./DropdownOptions";
 
 const FilterDropdown = () => {
     const [showDropdown, setShowDropdown] = useState(false);
+    const [selectedOption, setSelectedOption] = useState("Pick an option");
+
+    const hideDropdown = () => setShowDropdown(false);
 
     return (
         <div>
@@ -14,7 +18,7 @@ const FilterDropdown = () => {
                     onClick={() => setShowDropdown(!showDropdown)}
                 >
                     <div className={styles.label}>
-                        Pick an option
+                        {selectedOption}
                         {showDropdown ? (
                             <MdKeyboardArrowUp size={18} />
                         ) : (
@@ -24,17 +28,31 @@ const FilterDropdown = () => {
                 </div>
                 {showDropdown && (
                     <div className={styles.listOfItems}>
-                        <div className={styles.filterDropdownOptionItem}>
-                            <div className={styles.rating}>Rating</div>
-                        </div>
-                        <div className={styles.filterDropdownOptionItem}>
-                            <div className={styles.rating}>Price</div>
-                        </div>
-                        <div className={styles.filterDropdownOptionItem}>
-                            <div className={styles.rating}>
-                                Slope Difficulty
-                            </div>
-                        </div>
+                        <DropdownOptions
+                            text="Rating"
+                            setSelectedOption={setSelectedOption}
+                            hideDropdown={hideDropdown}
+                        />
+                        <DropdownOptions
+                            text="Price"
+                            setSelectedOption={setSelectedOption}
+                            hideDropdown={hideDropdown}
+                        />
+                        <DropdownOptions
+                            text="Slope Difficulty"
+                            setSelectedOption={setSelectedOption}
+                            hideDropdown={hideDropdown}
+                        />
+                        <DropdownOptions
+                            text="Lifts"
+                            setSelectedOption={setSelectedOption}
+                            hideDropdown={hideDropdown}
+                        />
+                        <DropdownOptions
+                            text="Parking"
+                            setSelectedOption={setSelectedOption}
+                            hideDropdown={hideDropdown}
+                        />
                     </div>
                 )}
             </div>

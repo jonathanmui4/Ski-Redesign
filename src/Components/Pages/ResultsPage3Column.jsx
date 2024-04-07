@@ -1,13 +1,14 @@
-import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
-import AdditionalFilters from "../Filters/AdditionalFilters";
+import React from "react";
+import FrameComponent1 from "./HomePage/FrameComponent1";
 import FilterDropdown from "../Filters/FilterDropdown";
 import Slider from "../Filters/Slider";
-import FrameComponent1 from "./HomePage/FrameComponent1";
-import styles from "./ResultsPageSingle1Col.module.css";
+import AdditionalFilters from "../Filters/AdditionalFilters";
+import ResultCard3Column from "../Cards/ResultCard3Column";
+import styles from "./ResultsPage3Column.module.css";
 
-const ResultsPageSingle1Col = () => {
+const ResultsPage3Column = () => {
     return (
-        <div className={styles.resultsPageSingle1Col}>
+        <div className={styles.resultsPageSingle3Col}>
             <div className={styles.content}>
                 <div className={styles.sortAndFilter}>
                     <div className={styles.frame}>
@@ -28,15 +29,19 @@ const ResultsPageSingle1Col = () => {
                     </div>
                 </div>
                 <div className={styles.cards}>
-                    <ResultCard1ColumndiffArra />
-                    <ResultCard1ColumndiffArra />
+                    <ResultCard3Column />
+                    <ResultCard3Column />
+                    <ResultCard3Column />
+                    <ResultCard3Column />
+                    <ResultCard3Column />
+                    <ResultCard3Column />
                 </div>
             </div>
-            <div className={styles.frame19}>
+            <div className={styles.frame62}>
                 <div className={styles.searchWrapper}>
                     <div className={styles.search1}>Search</div>
                 </div>
-                <div className={styles.frame20}>
+                <div className={styles.frame63}>
                     <div className={styles.searchForSki}>
                         Search for ski resorts, regions, terms ...
                     </div>
@@ -47,4 +52,4 @@ const ResultsPageSingle1Col = () => {
     );
 };
 
-export default ResultsPageSingle1Col;
+export default ResultsPage3Column;

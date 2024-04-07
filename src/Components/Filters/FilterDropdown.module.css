@@ -3,26 +3,26 @@
     line-height: 24px;
     font-weight: 600;
     display: inline-block;
-  }
-  .filterBy,
-  .icon,
-  .label {
+}
+.filterBy,
+.icon,
+.label {
     position: relative;
-  }
-  .label {
+}
+.label {
     line-height: 20px;
     font-weight: 500;
     display: inline-flex;
     flex: 1;
-  }
-  .icon {
+}
+.icon {
     width: 18px;
     height: 18px;
     overflow: hidden;
     flex-shrink: 0;
     opacity: 0.5;
-  }
-  .button {
+}
+.button {
     border-radius: var(--br-5xs);
     background-color: var(--white);
     border: 1px solid var(--stroke);
@@ -33,45 +33,31 @@
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-5xs);
     cursor: pointer;
-  }
-  .button:hover {
+}
+.button:hover {
     background-color: var(--hover);
-  }
-  .rating {
-    position: relative;
-    line-height: 20px;
-  }
-  .filterDropdown,
-  .filterDropdownOptionItem,
-  .listOfItems {
+}
+.filterDropdown,
+.listOfItems {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .filterDropdownOptionItem {
-    align-self: stretch;
-    flex-direction: row;
-    padding: var(--padding-5xs) var(--padding-base);
-    cursor: pointer;
-  }
-  .filterDropdownOptionItem:hover {
-    background-color: var(--hover);
-  }
-  .filterDropdown,
-  .listOfItems {
+}
+.filterDropdown,
+.listOfItems {
     border-radius: var(--br-5xs);
     flex-direction: column;
     gap: var(--gap-9xs);
-  }
-  .listOfItems {
+}
+.listOfItems {
     align-self: stretch;
     background-color: var(--white);
     border: 1px solid var(--stroke);
     padding: var(--padding-5xs) 0;
     color: var(--black);
-  }
-  .filterDropdown {
+}
+.filterDropdown {
     width: 257px;
     color: var(--primary);
     font-family: var(--font-fira-sans);
-  }
+}
