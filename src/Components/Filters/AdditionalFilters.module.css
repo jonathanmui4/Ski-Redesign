@@ -1,0 +1,14 @@
+.additionalFilters {
+    width: 288px;
+    line-height: 24px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.buttonParent {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

@@ -1,4 +1,5 @@
 import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
+import AdditionalFilters from "../Filters/AdditionalFilters";
 import FilterDropdown from "../Filters/FilterDropdown";
 import styles from "./ResultsPageSingle1Col.module.css";
 
@@ -10,6 +11,7 @@ const ResultsPageSingle1Col = () => {
                     <div className={styles.frame}>
                         <div className={styles.filterByParent}>
                             <FilterDropdown />
+                            <AdditionalFilters />
                         </div>
                     </div>
                     <div className={styles.searchButton}>
