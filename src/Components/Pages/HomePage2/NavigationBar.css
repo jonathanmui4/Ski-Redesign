@@ -23,6 +23,7 @@
   display: inline-block;
   min-width: 93px;
   white-space: nowrap;
+  color: white;
 }
 .rectangle {
   height: 1.7px;

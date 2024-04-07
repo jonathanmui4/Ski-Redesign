@@ -20,8 +20,10 @@ const NavigationBar = () => {
               </div>
               <div className="frame1">
                 <div className="tab">
-                  <b className="tab-1">All Ski Resorts</b>
-                  <div className="borders">
+                  <a href="" target="_blank" rel="noopener noreferrer">
+                    <b className="tab-1">All Ski Resorts</b>
+                  </a>
+                <div className="borders">
                     <div className="rectangle" />
                   </div>
                 </div>

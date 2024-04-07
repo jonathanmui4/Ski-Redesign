@@ -20,7 +20,9 @@ const FrameComponent1 = () => {
               </div>
               <div className="frame1">
                 <div className="tab">
+                <a href="" target="_blank" rel="noopener noreferrer">
                   <b className="tab-1">All Ski Resorts</b>
+                </a>
                   <div className="borders">
                     <div className="rectangle" />
                   </div>
