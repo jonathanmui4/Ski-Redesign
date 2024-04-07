@@ -1,6 +1,7 @@
 import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
 import AdditionalFilters from "../Filters/AdditionalFilters";
 import FilterDropdown from "../Filters/FilterDropdown";
+import FrameComponent1 from "./HomePage/FrameComponent1";
 import styles from "./ResultsPageSingle1Col.module.css";
 
 const ResultsPageSingle1Col = () => {
@@ -11,6 +12,7 @@ const ResultsPageSingle1Col = () => {
                     <div className={styles.frame}>
                         <div className={styles.filterByParent}>
                             <FilterDropdown />
+                            <div>Hello</div>
                             <AdditionalFilters />
                         </div>
                     </div>
@@ -33,70 +35,7 @@ const ResultsPageSingle1Col = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.navigationBar}>
-                <div className={styles.frame21}>
-                    <div className={styles.frame22}>
-                        <div className={styles.logo}>
-                            <img
-                                className={styles.skiresortLogoIcon}
-                                alt=""
-                                src="/skiresort-logo@2x.png"
-                            />
-                        </div>
-                        <div className={styles.frame23}>
-                            <div className={styles.tab}>
-                                <div className={styles.label}>
-                                    All Ski Resorts
-                                </div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.tab2}>
-                                <div className={styles.label}>Test Reports</div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.tab3}>
-                                <div className={styles.label}>Comparison</div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.tab4}>
-                                <div className={styles.label}>Weather</div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.tab5}>
-                                <div className={styles.label}>Ski Lifts</div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.tab6}>
-                                <div className={styles.label}>
-                                    Accommodations
-                                </div>
-                                <div className={styles.borders}>
-                                    <div className={styles.rectangle} />
-                                </div>
-                            </div>
-                            <div className={styles.frameItem} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={styles.vectorParent}>
-                <img
-                    className={styles.ellipseIcon}
-                    alt=""
-                    src="/ellipse-10@2x.png"
-                />
-                <b className={styles.austria}>Austria</b>
-            </div>
+            <FrameComponent1 />
         </div>
     );
 };
