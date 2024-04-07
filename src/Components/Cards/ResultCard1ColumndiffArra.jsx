@@ -1,9 +1,11 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import PropTypes from "prop-types";
 import styles from "./ResultCard1ColumndiffArra.module.css";
 
-const ResultCard1ColumndiffArra = () => {
-    const imgUrl = "resorts/Resort1.jpeg";
-    const rating = 4.5;
+const ResultCard1ColumndiffArra = (props) => {
+    const { key, name, rating, price, tags, imgUrl } = props;
+    // const imgUrl = "resorts/Resort1.jpeg";
+    // const rating = 4.5;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -60,12 +62,12 @@ const ResultCard1ColumndiffArra = () => {
                         </div>
                         <div className={styles.frame3}>
                             <div className={styles.alpineDreamsResort}>
-                                Alpine Dreams Resort
+                                {name}
                             </div>
                         </div>
                         <div className={styles.frame4}>
                             <div className={styles.startingFrom299}>
-                                Starting from $299
+                                Starting from ${price}
                             </div>
                         </div>
                         <div className={styles.frame5}>
@@ -91,6 +93,15 @@ const ResultCard1ColumndiffArra = () => {
             </div>
         </div>
     );
+};
+
+ResultCard1ColumndiffArra.propTypes = {
+    key: PropTypes.number,
+    name: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    tags: PropTypes.array.isRequired,
+    imgUrl: PropTypes.string.isRequired,
 };
 
 export default ResultCard1ColumndiffArra;

@@ -3,9 +3,11 @@ import AdditionalFilters from "../Filters/AdditionalFilters";
 import FilterDropdown from "../Filters/FilterDropdown";
 import Slider from "../Filters/Slider";
 import FrameComponent1 from "./HomePage/FrameComponent1";
+import { resorts } from "../../content";
 import styles from "./ResultsPageSingle1Col.module.css";
 
 const ResultsPageSingle1Col = () => {
+    console.log(resorts);
     return (
         <div className={styles.resultsPageSingle1Col}>
             <div className={styles.content}>
@@ -28,8 +30,18 @@ const ResultsPageSingle1Col = () => {
                     </div>
                 </div>
                 <div className={styles.cards}>
-                    <ResultCard1ColumndiffArra />
-                    <ResultCard1ColumndiffArra />
+                    {resorts.map((resort, index) => {
+                        return (
+                            <ResultCard1ColumndiffArra
+                                key={index}
+                                name={resort.name}
+                                rating={resort.rating}
+                                price={resort.price}
+                                tags={resort.tags}
+                                imgUrl={resort.image}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <div className={styles.frame19}>
