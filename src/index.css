@@ -12,6 +12,7 @@ body {
     --font-ibm-plex-sans: "IBM Plex Sans";
     --font-asap-condensed: "Asap Condensed";
     --button-medium: Inter;
+    --body-1: Roboto;
 
     /* font sizes */
     --font-size-xs: 12px;
