@@ -1,3 +1,7 @@
+.container {
+    margin-top: 12px;
+}
+
 .additionalFilters {
     width: 288px;
     line-height: 24px;
