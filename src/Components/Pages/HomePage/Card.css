@@ -32,7 +32,7 @@
   .vertical-shift-50-height {
     align-self: stretch;
     flex: 1;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -82,11 +82,11 @@
   }
   .aspect-ratio-keeper-addition {
     height: 100%;
-    width: 249.8px;
+    width: 100%;
     margin: 0 !important;
     position: absolute;
     top: 0;
-    right: 41.6px;
+    right: 0;
     bottom: 0;
     max-height: 100%;
     object-fit: contain;
@@ -99,10 +99,10 @@
   .aspect-ratio {
     height: 249.8px;
     flex-shrink: 0;
-    display: flex;
+    background-size: cover;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-start; 
   }
   .swap-me-with {
     height: 16px;
@@ -118,7 +118,7 @@
     backdrop-filter: blur(8px);
     border: 1px dashed var(--color-white);
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,12 +134,12 @@
   }
   .image {
     align-self: stretch;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-image: url(/public/image@3x.png);
+    /* background-image: url(/public/image@3x.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -204,6 +204,7 @@
     align-self: stretch;
     flex-direction: row;
     padding: var(--padding-7xs) var(--padding-32xl);
+    overflow: visible;
     position: relative;
     text-align: center;
     font-size: var(--font-size-sm);
@@ -227,7 +228,7 @@
     width: 333px;
     border-radius: var(--br-5xs);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: 0;
     padding: 0 0 var(--padding-12xs-2);
     box-sizing: border-box;

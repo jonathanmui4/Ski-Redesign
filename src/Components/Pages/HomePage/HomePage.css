@@ -7,13 +7,14 @@
     bottom: 0;
     left: 0;
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: 0;
     object-fit: cover;
   }
   .explore-the-exciting {
     margin: 0;
-    width: 389px;
+    margin-left: -36px;
+    width: 100%;
     position: relative;
     font-size: inherit;
     line-height: 24px;
@@ -23,7 +24,6 @@
     align-items: center;
     justify-content: center;
     text-shadow: 0 4px 12.3px rgba(0, 0, 0, 0.25);
-    max-width: 100%;
     z-index: 1;
   }
   .card-list,
@@ -34,8 +34,9 @@
   .ski-resorts {
     margin: 0;
     align-self: stretch;
-    height: 166px;
+    height: 64px;
     position: relative;
+    width: 100%;
     font-size: 96px;
     line-height: 24px;
     font-weight: 700;
@@ -74,7 +75,7 @@
     height: 832px;
     position: relative;
     background-color: var(--color-white);
-    overflow-y: auto;
+    overflow-y: visible;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 0 400px;

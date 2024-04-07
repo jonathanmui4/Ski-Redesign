@@ -25,8 +25,8 @@ const Card = ({
 
   return (
     <div className="card">
-      <div className="image" style={imageStyle}>
-        <div className="top-aligned-0px-wrapper">
+      <div className="image">
+        {/* <div className="top-aligned-0px-wrapper">
           <div className="favorite-border-wrapper">
             <img
               className="favorite-border-icon"
@@ -35,8 +35,8 @@ const Card = ({
               src={favoriteBorder}
             />
           </div>
-        </div>
-        <div className="center-aligned-0px-wrapper">
+        </div> */}
+        {/* <div className="center-aligned-0px-wrapper">
           <div className="wrapper">
             <div className="vertical-shift-50-height">
               <div className="aspect-ratio-keeper-rotated" />
@@ -51,8 +51,8 @@ const Card = ({
               </div>
             </div>
           </div>
-        </div>
-        <div className="aspect-ratio">
+        </div> */}
+        <div className="aspect-ratio" style={imageStyle}>
           <img
             className="aspect-ratio-keeper-addition"
             loading="lazy"

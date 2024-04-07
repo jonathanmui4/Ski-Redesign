@@ -1,95 +1,115 @@
 .frame-child {
-    align-self: stretch;
-    height: 1px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  max-width: 100%;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.vector-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0 0;
+  box-sizing: border-box;
+  min-width: 278px;
+  max-width: 100%;
+}
+.best-ski-resort {
+  margin: 0;
+  width: 193px;
+  position: relative;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
+.frame-item {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  max-width: 100%;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.frame-group,
+.vector-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.vector-container {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0 0;
+  box-sizing: border-box;
+  min-width: 278px;
+}
+.frame-group {
+  width: 1067px;
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.frame-parent,
+.suggested {
+  display: flex;
+  justify-content: flex-start;
+}
+.suggested {
+  width: 1067px;
+  overflow-x: visible;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-15xl);
+  max-width: 100%;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  font-family: var(--font-ibm-plex-sans);
+}
+.frame-parent {
+  align-self: stretch;
+  height: 300px;
+  background-color: var(--color-gray-400);
+  backdrop-filter: blur(4px);
+  overflow: visible;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-16xl) var(--padding-xl) var(--padding-51xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  debug_commit: f6aba90;
+  z-index: 1;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-steelblue);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 900px) {
+  .frame-parent {
+    height: auto;
   }
-  .vector-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-xs) 0 0;
-    box-sizing: border-box;
-    min-width: 278px;
-    max-width: 100%;
-  }
-  .best-ski-resort {
-    margin: 0;
-    width: 193px;
-    position: relative;
-    font-size: inherit;
-    line-height: 24px;
-    font-weight: 500;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .frame-item {
-    align-self: stretch;
-    height: 1px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .frame-group,
-  .vector-container {
-    display: flex;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .vector-container {
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-xs) 0 0;
-    box-sizing: border-box;
-    min-width: 278px;
-  }
-  .frame-group {
-    width: 100%;
-    border-radius: var(--br-5xs);
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--gap-3xs);
-  }
-  .frame-parent,
+}
+@media screen and (max-width: 700px) {
   .suggested {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .suggested {
-    width: 1067px;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--gap-15xl);
-    max-width: 100%;
-    font-size: var(--font-size-xs);
-    color: var(--color-white);
-    font-family: var(--font-ibm-plex-sans);
+    gap: 34px 17px;
   }
   .frame-parent {
-    align-self: stretch;
-    height: 300px;
-    background-color: var(--color-gray-400);
-    backdrop-filter: blur(4px);
-    overflow: hidden;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--padding-16xl) var(--padding-xl) var(--padding-51xl);
+    padding-top: var(--padding-4xl);
+    padding-bottom: var(--padding-26xl);
     box-sizing: border-box;
-    gap: var(--gap-xl);
-    debug_commit: f6aba90;
-    z-index: 1;
-    text-align: center;
-    font-size: var(--font-size-xl);
-    color: var(--color-steelblue);
-    font-family: var(--font-roboto);
   }
-
-  
+}
+@media screen and (max-width: 450px) {
+  .best-ski-resort {
+    font-size: var(--font-size-base);
+    line-height: 19px;
+  }
+}
