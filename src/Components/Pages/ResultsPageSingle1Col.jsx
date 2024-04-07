@@ -1,6 +1,7 @@
 import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
 import AdditionalFilters from "../Filters/AdditionalFilters";
 import FilterDropdown from "../Filters/FilterDropdown";
+import Slider from "../Filters/Slider";
 import FrameComponent1 from "./HomePage/FrameComponent1";
 import styles from "./ResultsPageSingle1Col.module.css";
 
@@ -12,7 +13,13 @@ const ResultsPageSingle1Col = () => {
                     <div className={styles.frame}>
                         <div className={styles.filterByParent}>
                             <FilterDropdown />
-                            <div>Hello</div>
+                            <Slider
+                                min={0}
+                                max={100}
+                                onChange={({ min, max }) =>
+                                    console.log(`min = ${min}, max = ${max}`)
+                                }
+                            />
                             <AdditionalFilters />
                         </div>
                     </div>

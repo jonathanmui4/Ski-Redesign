@@ -1,24 +1,24 @@
-  .filterByParent {
+.filterByParent {
     height: 365px;
     gap: 6px;
-  }
-  .filterByParent,
-  .frame {
+}
+.filterByParent,
+.frame {
     width: 305px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .search {
+}
+.search {
     width: 53px;
     position: relative;
     line-height: 24px;
     font-weight: 500;
     display: inline-block;
     flex-shrink: 0;
-  }
-  .searchButton {
+}
+.searchButton {
     width: 288px;
     border-radius: var(--br-9xs);
     background-color: var(--color-gold);
@@ -30,8 +30,8 @@
     box-sizing: border-box;
     text-align: center;
     color: var(--color-darkslategray);
-  }
-  .sortAndFilter {
+}
+.sortAndFilter {
     position: absolute;
     top: 75px;
     left: 23px;
@@ -41,12 +41,12 @@
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-3xs);
-  }
-  .cards,
-  .content {
+}
+.cards,
+.content {
     position: absolute;
-  }
-  .cards {
+}
+.cards {
     top: 104px;
     left: 336px;
     width: 928px;
@@ -57,21 +57,21 @@
     justify-content: flex-start;
     gap: 40px;
     color: var(--color-dimgray);
-  }
-  .content {
+}
+.content {
     width: 100%;
     top: 57px;
     right: 0;
     left: 0;
     height: 775px;
     overflow-y: auto;
-  }
-  .search1 {
+}
+.search1 {
     position: relative;
     line-height: 24px;
     font-weight: 500;
-  }
-  .searchWrapper {
+}
+.searchWrapper {
     position: absolute;
     top: 0;
     left: 816px;
@@ -86,21 +86,21 @@
     justify-content: center;
     padding: 9px;
     box-sizing: border-box;
-  }
-  .searchForSki {
+}
+.searchForSki {
     position: absolute;
     top: 8px;
     left: 9px;
     line-height: 24px;
     display: inline-block;
     width: 788px;
-  }
-  .frame19,
-  .frame20 {
+}
+.frame19,
+.frame20 {
     position: absolute;
     height: 41px;
-  }
-  .frame20 {
+}
+.frame20 {
     width: 100%;
     top: 0;
     right: 0;
@@ -109,15 +109,15 @@
     border: 1px solid #d1d5db;
     box-sizing: border-box;
     color: #b2b2b2;
-  }
-  .frame19 {
+}
+.frame19 {
     width: 72.5%;
     top: 73px;
     right: 1.25%;
     left: 26.25%;
     color: var(--color-darkslategray);
-  }
-  .resultsPageSingle1Col {
+}
+.resultsPageSingle1Col {
     width: 100%;
     position: relative;
     background-color: var(--white);
@@ -127,5 +127,4 @@
     font-size: var(--font-size-base);
     color: var(--black);
     font-family: var(--font-roboto);
-  }
-  
+}
