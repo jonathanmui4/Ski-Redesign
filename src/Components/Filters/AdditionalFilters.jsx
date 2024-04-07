@@ -10,6 +10,10 @@ const AdditionalFilters = () => {
                 <FilterButtons text="Best Ratings" />
                 <FilterButtons text="Cheap Resorts" />
                 <FilterButtons text="For Beginners" />
+                <FilterButtons text="Eco-friendly" />
+                <FilterButtons text="Family Friendly" />
+                <FilterButtons text="With Lifts" />
+                <FilterButtons text="With Parking" />
             </div>
         </div>
     );
