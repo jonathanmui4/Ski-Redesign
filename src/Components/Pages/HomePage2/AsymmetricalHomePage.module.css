@@ -1,4 +1,6 @@
-.asymmetrical-home-page-child {
+/* AsymmetricalHomePageChild.module.css */
+
+.asymmetricalHomePageChild {
   position: absolute;
   top: 57px;
   left: 0;
@@ -7,11 +9,13 @@
   object-fit: cover;
   z-index: 0;
 }
+
 .clear,
 .title {
   flex: 1;
   position: relative;
 }
+
 .title {
   line-height: 24px;
   display: inline-block;
@@ -20,31 +24,36 @@
   white-space: nowrap;
   max-width: 100%;
 }
+
 .clear {
   align-self: stretch;
   letter-spacing: -0.3px;
   line-height: 16px;
 }
+
 .input,
-.input-wrapper,
-.text-button,
-.text-button-wrapper {
+.inputWrapper,
+.textButton,
+.textButtonWrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.text-button {
+
+.textButton {
   align-self: stretch;
   flex: 1;
   flex-direction: row;
   padding: 0 0 0 var(--padding-8xs);
 }
+
 .input,
-.input-wrapper,
-.text-button-wrapper {
+.inputWrapper,
+.textButtonWrapper {
   box-sizing: border-box;
 }
-.text-button-wrapper {
+
+.textButtonWrapper {
   height: 20px;
   width: 37px;
   flex-direction: column;
@@ -53,10 +62,12 @@
   font-size: var(--font-size-sm);
   color: transparent;
 }
+
 .input,
-.input-wrapper {
+.inputWrapper {
   max-width: 100%;
 }
+
 .input {
   align-self: stretch;
   border-radius: var(--br-9xs);
@@ -65,11 +76,13 @@
   padding: var(--padding-5xs) var(--padding-xs);
   gap: 7px;
 }
-.input-wrapper {
+
+.inputWrapper {
   flex: 1;
   flex-direction: column;
   padding: var(--padding-5xs) 0 0;
 }
+
 .search {
   position: relative;
   font-size: var(--font-size-xl);
@@ -81,24 +94,28 @@
   min-width: 63px;
   white-space: nowrap;
 }
-.search-bar,
-.search-wrapper {
+
+.searchBar,
+.searchWrapper {
   overflow: visible;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.search-wrapper {
+
+.searchWrapper {
   cursor: pointer;
   border: 0;
   padding: 16px 35.5px;
   background-color: var(--color-gold-100);
 }
-.search-wrapper:hover {
+
+.searchWrapper:hover {
   background-color: #e6c700;
 }
-.search-bar {
+
+.searchBar {
   position: absolute;
   top: 40%;
   left: 25px;
@@ -112,7 +129,8 @@
   max-width: 100%;
   text-align: left;
 }
-.asymmetrical-home-page-item {
+
+.asymmetricalHomePageItem {
   position: absolute;
   top: 353px;
   left: 0;
@@ -121,8 +139,9 @@
   overflow: visible;
   display: none;
 }
-.explore-the-exciting,
-.ski-resorts {
+
+.exploreTheExciting,
+.skiResorts {
   margin: 0;
   position: absolute;
   left: 10%;
@@ -132,7 +151,8 @@
   justify-content: center;
   z-index: 1;
 }
-.explore-the-exciting {
+
+.exploreTheExciting {
   top: 181px;
   left: 10%;
   font-size: var(--font-size-5xl);
@@ -141,7 +161,8 @@
   color: rgba(246, 252, 255, 0.9);
   text-shadow: 0 4px 12.3px rgba(0, 0, 0, 0.25);
 }
-.ski-resorts {
+
+.skiResorts {
   top: 223px;
   font-size: 96px;
   font-weight: 700;
@@ -151,7 +172,8 @@
   height: 66px;
   text-shadow: 0 4px 35.5px rgba(26, 60, 67, 0.6);
 }
-.frame-child {
+
+.frameChild {
   align-self: stretch;
   height: 1px;
   position: relative;
@@ -159,7 +181,8 @@
   overflow: visible;
   flex-shrink: 0;
 }
-.vector-wrapper {
+
+.vectorWrapper {
   height: 13px;
   width: 121px;
   display: flex;
@@ -169,7 +192,8 @@
   padding: var(--padding-xs) 0 0;
   box-sizing: border-box;
 }
-.best-ski-resort {
+
+.bestSkiResort {
   margin: 0;
   flex: 1;
   position: relative;
@@ -177,13 +201,13 @@
   line-height: 24px;
   font-weight: 500;
   font-family: inherit;
-  /* display: inline-block; */
   margin-top: -10%;
   justify-content: center;
   margin-right: 10%;
   min-width: 125px;
 }
-.frame-item {
+
+.frameItem {
   align-self: stretch;
   height: 1px;
   position: relative;
@@ -191,39 +215,43 @@
   overflow: visible;
   flex-shrink: 0;
 }
-.frame-group,
-.frame-parent,
-.vector-container {
+
+.frameGroup,
+.frameParent,
+.vectorContainer {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.vector-container {
+
+.vectorContainer {
   height: 13px;
   width: 121px;
   flex-direction: column;
   padding: var(--padding-xs) 0 0;
   box-sizing: border-box;
 }
-.frame-group,
-.frame-parent {
+
+.frameGroup,
+.frameParent {
   max-width: 100%;
 }
-.frame-group {
+
+.frameGroup {
   width: 455px;
   border-radius: var(--br-5xs);
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--gap-3xs);
 }
-.frame-parent {
+
+.frameParent {
   position: absolute;
   height: 100vh;
   top: 55px;
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(4px);
-  /* width: 752px; */
   overflow: visible;
   flex-direction: column;
   padding: 123px 57px 158px;
@@ -233,7 +261,8 @@
   font-size: var(--font-size-xl);
   color: #0d5377;
 }
-.asymmetrical-home-page {
+
+.asymmetricalHomePage {
   width: 100%;
   height: 832px;
   position: relative;
@@ -245,150 +274,34 @@
   color: #676767;
   font-family: var(--font-roboto);
 }
+
 @media screen and (max-width: 1025px) {
-  .ski-resorts {
-    font-size: 48px;
-    line-height: 14px;
+  .skiResorts {
+      font-size: 48px;
+      line-height: 14px;
   }
 }
+
 @media screen and (max-width: 750px) {
   .title {
-    display: none;
+      display: none;
   }
-  .asymmetrical-home-page {
-    height: auto;
-    min-height: 832;
+  .asymmetricalHomePage {
+      height: auto;
+      min-height: 832;
   }
 }
+
 @media screen and (max-width: 450px) {
-  .explore-the-exciting {
-    font-size: 19px;
-    line-height: 19px;
+  .exploreTheExciting {
+      font-size: 19px;
+      line-height: 19px;
   }
-  .ski-resorts {
-    font-size: 29px;
-    line-height: 10px;
+  .skiResorts {
+      font-size: 29px;
+      line-height: 10px;
   }
-  .best-ski-resort {
-    font-size: var(--font-size-base);
+  .bestSkiResort {
+      font-size: var(--font-size-base);
   }
-}
-.clear,
-.title {
-    flex: 1;
-    position: relative;
-}
-.title {
-    line-height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 248px;
-    max-width: 100%;
-}
-.clear {
-    align-self: stretch;
-    letter-spacing: -0.3px;
-    line-height: 16px;
-}
-.input,
-.input-wrapper,
-.text-button,
-.text-button-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.text-button {
-    align-self: stretch;
-    flex: 1;
-    flex-direction: row;
-    padding: 0 0 0 var(--padding-8xs);
-}
-.input,
-.input-wrapper,
-.text-button-wrapper {
-    box-sizing: border-box;
-}
-.text-button-wrapper {
-    height: 20px;
-    width: 37px;
-    flex-direction: column;
-    padding: var(--padding-9xs) 0 0;
-    text-align: right;
-    font-size: var(--font-size-sm);
-    color: transparent;
-}
-.input,
-.input-wrapper {
-    max-width: 100%;
-}
-.input {
-    align-self: stretch;
-    border-radius: var(--br-9xs);
-    overflow: hidden;
-    flex-direction: row;
-    padding: var(--padding-5xs) var(--padding-xs);
-    gap: var(--gap-6xs);
-}
-.input-wrapper {
-    flex: 1;
-    flex-direction: column;
-    padding: var(--padding-5xs) 0 0;
-    min-width: 400px;
-}
-.search {
-    position: relative;
-    font-size: var(--font-size-xl);
-    line-height: 24px;
-    display: inline-block;
-    font-family: var(--font-roboto);
-    color: var(--color-gray-100);
-    text-align: left;
-    min-width: 63px;
-}
-.details-container,
-.favoriteborder-shape,
-.search-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-.details-container {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-base) var(--padding-16xl-5);
-    background-color: var(--color-gold-100);
-    overflow: hidden;
-    justify-content: flex-start;
-}
-.details-container:hover {
-    background-color: var(--color-gold-200);
-}
-.favoriteborder-shape,
-.search-bar {
-    justify-content: center;
-    box-sizing: border-box;
-    flex-shrink: 0;
-}
-.search-bar {
-    width: 750px;
-    border-radius: var(--br-7xs);
-    background-color: var(--color-gray-200);
-    backdrop-filter: blur(7px);
-    border: 1px solid var(--color-darkgray-200);
-    overflow: hidden;
-    flex-wrap: wrap;
-    debug_commit: f6aba90;
-    z-index: 1;
-}
-.favoriteborder-shape {
-    align-self: stretch;
-    padding: 0 var(--padding-xl) var(--padding-sm);
-    max-width: 100%;
-    text-align: left;
-    font-size: var(--font-size-lg);
-    color: var(--color-dimgray);
-    font-family: var(--font-roboto);
 }

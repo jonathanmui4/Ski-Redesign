@@ -1,4 +1,6 @@
-.skiresort-logo-icon {
+/* Navbar.module.css */
+
+.skiresortLogoIcon {
   align-self: stretch;
   height: 37px;
   position: relative;
@@ -7,6 +9,7 @@
   flex-shrink: 0;
   object-fit: cover;
 }
+
 .logo {
   align-self: stretch;
   width: 138px;
@@ -17,7 +20,17 @@
   padding: var(--padding-3xs) 0;
   box-sizing: border-box;
 }
-.tab-1 {
+
+.tab1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-5xl-9);
+  color: white;
+}
+
+.tab11 {
   position: relative;
   line-height: 20px;
   display: inline-block;
@@ -25,12 +38,14 @@
   white-space: nowrap;
   color: white;
 }
+
 .rectangle {
   height: 1.7px;
   width: 43.1px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders,
 .tab {
   display: flex;
@@ -39,29 +54,33 @@
   justify-content: flex-start;
   padding: 0 var(--padding-5xl-9);
 }
+
 .tab {
   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0)
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
   );
   flex-direction: column;
   padding: 0 var(--padding-11xs);
   gap: var(--gap-3xs);
 }
-.tab-11 {
+
+.tab12 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 81px;
   white-space: nowrap;
 }
+
 .rectangle1 {
   height: 1.7px;
   width: 43.1px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders1,
 .tab1 {
   display: flex;
@@ -70,23 +89,27 @@
   justify-content: flex-start;
   padding: 0 var(--padding-lg-9);
 }
+
 .tab1 {
   flex-direction: column;
   padding: 0 var(--padding-11xs);
   gap: var(--gap-3xs);
 }
-.tab-12 {
+
+.tab13 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 77px;
 }
+
 .rectangle2 {
   height: 1.7px;
   width: 43.1px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders2,
 .tab2 {
   display: flex;
@@ -95,33 +118,39 @@
   justify-content: flex-start;
   padding: 0 var(--padding-base-9);
 }
+
 .tab2 {
   flex-direction: column;
   padding: 0 var(--padding-11xs);
   gap: var(--gap-3xs);
 }
-.tab-13 {
+
+.tab14 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 53px;
 }
+
 .rectangle3 {
   align-self: stretch;
   height: 1.7px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders3,
 .tab3 {
   display: flex;
   flex-direction: column;
 }
+
 .borders3 {
   align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+
 .tab3 {
   width: 57px;
   align-items: flex-start;
@@ -130,29 +159,34 @@
   box-sizing: border-box;
   gap: var(--gap-3xs);
 }
-.tab-14 {
+
+.tab15 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 52px;
   white-space: nowrap;
 }
+
 .rectangle4 {
   align-self: stretch;
   height: 1.7px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders4,
 .tab4 {
   display: flex;
   flex-direction: column;
 }
+
 .borders4 {
   align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+
 .tab4 {
   width: 56px;
   align-items: flex-start;
@@ -161,29 +195,34 @@
   box-sizing: border-box;
   gap: var(--gap-3xs);
 }
-.tab-15 {
+
+.tab16 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 111px;
 }
+
 .rectangle5 {
   height: 1.7px;
   width: 43.1px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
+
 .borders5,
 .tab5 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .borders5 {
   align-self: stretch;
   flex-direction: row;
   padding: 0 var(--padding-14xl-9);
 }
+
 .tab5 {
   width: 115px;
   flex-direction: column;
@@ -191,26 +230,22 @@
   box-sizing: border-box;
   gap: var(--gap-3xs);
 }
-.tab-16 {
+
+.tab16 {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 58px;
   white-space: nowrap;
 }
+
 .rectangle6 {
   align-self: stretch;
   height: 1.7px;
   position: relative;
   background-color: var(--color-mediumslateblue);
 }
-.borders6 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .frame,
 .frame1,
 .tab6,
@@ -218,6 +253,7 @@
   display: flex;
   align-items: flex-start;
 }
+
 .tab6 {
   width: 62px;
   flex-direction: column;
@@ -226,12 +262,14 @@
   box-sizing: border-box;
   gap: var(--gap-3xs);
 }
+
 .frame,
 .frame1,
 .tabs {
   flex-direction: row;
   max-width: 100%;
 }
+
 .frame1 {
   flex: 1;
   justify-content: space-between;
@@ -239,41 +277,42 @@
   box-sizing: border-box;
   gap: var(--gap-xl);
 }
-.frame,
-.tabs {
-  align-self: stretch;
-  justify-content: flex-start;
-}
+
 .frame {
   flex: 1;
   gap: var(--gap-11xl);
 }
+
 .tabs {
   width: 938px;
   padding: 0 var(--padding-3xs);
   box-sizing: border-box;
 }
-.country-child {
+
+.countryChild {
   height: 30px;
   width: 30px;
   position: relative;
   object-fit: cover;
 }
+
 .singapore {
   position: relative;
   line-height: 20px;
   display: inline-block;
   min-width: 64px;
 }
-.singapore-wrapper {
+
+.singaporeWrapper {
   display: flex;
-  flex-direction: column; /* Changed from column to row */
-  align-items: flex-start; /* Align items vertically */
-  justify-content: flex-start;
+  flex-direction: row; /* Change from column to row */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center items horizontally */
   padding: var(--padding-8xs) 0 0;
+  overflow: visible;
 }
 
-.teenyiconsdown-solid {
+.teenyiconsdownSolid {
   width: 10px;
   height: 5px;
   margin-top: -4px;
@@ -282,65 +321,77 @@
   flex-shrink: 0;
 }
 
-.t-e-x-t-search-label {
+.textSearchLabel {
   height: 20px;
   flex-direction: column;
   padding: var(--padding-3xs) 0 0;
   box-sizing: border-box;
 }
+
 .country,
-.country-wrapper,
-.t-e-x-t-search-label {
+.countryWrapper,
+.textSearchLabel {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  overflow: visible;
 }
+
 .country {
   flex: 1;
   flex-direction: row;
   padding: 0 var(--padding-sm);
   gap: var(--gap-5xs);
 }
-.country-wrapper {
+
+.countryWrapper {
   height: 43.5px;
   flex-direction: column;
   padding: var(--padding-sm-5) 0 0;
   box-sizing: border-box;
   color: var(--color-white);
+  position: relative;
+  overflow: visible;
 }
-.navigation-bar,
-.navigation-bar-wrapper,
-.tabs-parent {
+
+.navigationBar,
+.navigationBarWrapper,
+.tabsParent {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  overflow: visible;
 }
-.tabs-parent {
+
+.tabsParent {
   flex: 1;
   justify-content: space-between;
   max-width: 100%;
   gap: var(--gap-xl);
+  overflow: visible;
 }
-.navigation-bar,
-.navigation-bar-wrapper {
+
+.navigationBar,
+.navigationBarWrapper {
   flex-shrink: 0;
   justify-content: flex-start;
+  overflow: visible;
 }
-.navigation-bar {
+
+.navigationBar {
   flex: 1;
-  top: 0;
   background-color: var(--color-darkslateblue);
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1),
-    0 0 0#000, 0 0 0#000;
+      0 0 0#000, 0 0 0#000;
   overflow: hidden;
-  debug_commit: f6aba90;
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--color-whitesmoke);
   font-family: var(--font-roboto);
 }
-.navigation-bar-wrapper {
+
+.navigationBarWrapper {
   height: 96px;
   padding: 0 0 var(--padding-20xl);
   box-sizing: border-box;
@@ -348,4 +399,33 @@
   z-index: 99;
   position: sticky;
   max-width: 100%;
+  overflow: visible;
+}
+
+.countryDropdown {
+  position: absolute; /* Ensure dropdown is positioned relative to the parent */
+  background-color: white; /* Background color for the dropdown */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add a slight shadow for depth */
+  border-radius: 4px; /* Optional: rounded corners */
+  width: 100%; /* Match the width to the country selector */
+  z-index: 10; /* Ensure it stacks above other content */
+  top: 100%; /* Position the dropdown right below the button */
+  left: 0; /* Align the dropdown to the left edge of the button */
+  width: auto; /* Let it extend to fit content or set a fixed width as needed */
+  overflow: visible; /* Ensure dropdown is not cut off */
+}
+
+.countryOption {
+  padding: 8px 12px; /* Add padding for each option */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+  list-style: none; /* Remove list styling */
+  color: black;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis to overflowed text */
+  z-index: 1000;
+}
+
+.countryOption:hover {
+  background-color: #f2f2f2; /* Color change on hover for feedback */
 }

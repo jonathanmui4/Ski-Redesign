@@ -1,4 +1,6 @@
-.frame-child {
+/* FrameComponent.module.css */
+
+.frameChild {
   align-self: stretch;
   height: 1px;
   position: relative;
@@ -6,7 +8,8 @@
   overflow: visible;
   flex-shrink: 0;
 }
-.vector-wrapper {
+
+.vectorWrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -17,7 +20,8 @@
   min-width: 278px;
   max-width: 100%;
 }
-.best-ski-resort {
+
+.bestSkiResort {
   margin: 0;
   width: 193px;
   position: relative;
@@ -27,7 +31,8 @@
   font-family: inherit;
   display: inline-block;
 }
-.frame-item {
+
+.frameItem {
   align-self: stretch;
   height: 1px;
   position: relative;
@@ -35,13 +40,15 @@
   overflow: visible;
   flex-shrink: 0;
 }
-.frame-group,
-.vector-container {
+
+.frameGroup,
+.vectorContainer {
   display: flex;
   align-items: flex-start;
   max-width: 100%;
 }
-.vector-container {
+
+.vectorContainer {
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
@@ -49,7 +56,8 @@
   box-sizing: border-box;
   min-width: 278px;
 }
-.frame-group {
+
+.frameGroup {
   width: 1067px;
   border-radius: var(--br-5xs);
   flex-direction: row;
@@ -57,11 +65,13 @@
   justify-content: center;
   gap: var(--gap-3xs);
 }
-.frame-parent,
+
+.frameParent,
 .suggested {
   display: flex;
   justify-content: flex-start;
 }
+
 .suggested {
   width: 1067px;
   overflow-x: visible;
@@ -73,7 +83,8 @@
   color: var(--color-white);
   font-family: var(--font-ibm-plex-sans);
 }
-.frame-parent {
+
+.frameParent {
   align-self: stretch;
   height: 300px;
   background-color: var(--color-gray-400);
@@ -85,31 +96,33 @@
   padding: var(--padding-16xl) var(--padding-xl) var(--padding-51xl);
   box-sizing: border-box;
   gap: var(--gap-xl);
-  debug_commit: f6aba90;
   z-index: 1;
   text-align: center;
   font-size: var(--font-size-xl);
   color: var(--color-steelblue);
   font-family: var(--font-roboto);
 }
+
 @media screen and (max-width: 900px) {
-  .frame-parent {
-    height: auto;
+  .frameParent {
+      height: auto;
   }
 }
+
 @media screen and (max-width: 700px) {
   .suggested {
-    gap: 34px 17px;
+      gap: 34px 17px;
   }
-  .frame-parent {
-    padding-top: var(--padding-4xl);
-    padding-bottom: var(--padding-26xl);
-    box-sizing: border-box;
+  .frameParent {
+      padding-top: var(--padding-4xl);
+      padding-bottom: var(--padding-26xl);
+      box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
-  .best-ski-resort {
-    font-size: var(--font-size-base);
-    line-height: 19px;
+  .bestSkiResort {
+      font-size: var(--font-size-base);
+      line-height: 19px;
   }
 }

@@ -1,6 +1,6 @@
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import React, { useState } from 'react';
-import "./Navbar.css";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import styles from "./Navbar.module.css";
 import CountryImage from '../../assets/Images/sg.png';
 import Logo from '../../assets/Images/logo.png';
 
@@ -8,97 +8,98 @@ const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState('Singapore');
 
-  return (
-    <div className="navigation-bar-wrapper">
-      <header className="navigation-bar">
-        <div className="tabs-parent">
-          <div className="tabs">
-            <div className="frame">
-              <div className="logo">
-                <img
-                  className="skiresort-logo-icon"
-                  loading="lazy"
-                  alt=""
-                  src={Logo}
-                />
-              </div>
-              <div className="frame1">
-                <div className="tab">
-                <a href="" target="_blank" rel="noopener noreferrer">
-                  <b className="tab-1">All Ski Resorts</b>
-                </a>
-                  <div className="borders">
-                    <div className="rectangle" />
-                  </div>
+    return (
+        <div className={styles.navigationBarWrapper}>
+            <header className={styles.navigationBar}>
+                <div className={styles.tabsParent}>
+                    <div className={styles.tabs}>
+                        <div className={styles.frame}>
+                            <div className={styles.logo}>
+                                <img
+                                    className={styles.skiResortLogoIcon}
+                                    loading="lazy"
+                                    alt=""
+                                    src={Logo}
+                                />
+                            </div>
+                            <div className={styles.frame1}>
+                                <div className={styles.tab}>
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <b className={styles.tab1}>All Ski Resorts</b>
+                                    </a>
+                                    <div className={styles.borders}>
+                                        <div className={styles.rectangle} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab1}>
+                                    <b className={styles.tab11}>Test Reports</b>
+                                    <div className={styles.borders1}>
+                                        <div className={styles.rectangle1} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab2}>
+                                    <b className={styles.tab12}>Comparison</b>
+                                    <div className={styles.borders2}>
+                                        <div className={styles.rectangle2} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab3}>
+                                    <b className={styles.tab13}>Weather</b>
+                                    <div className={styles.borders3}>
+                                        <div className={styles.rectangle3} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab4}>
+                                    <b className={styles.tab14}>Ski Lifts</b>
+                                    <div className={styles.borders4}>
+                                        <div className={styles.rectangle4} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab5}>
+                                    <b className={styles.tab15}>Accommodations</b>
+                                    <div className={styles.borders5}>
+                                        <div className={styles.rectangle5} />
+                                    </div>
+                                </div>
+                                <div className={styles.tab6}>
+                                    <b className={styles.tab16}>About Us</b>
+                                    <div className={styles.borders6}>
+                                        <div className={styles.rectangle6} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.countryWrapper}>
+                        <div className={styles.country} onClick={() => setDropdownOpen(!dropdownOpen)}>
+                            <img className={styles.countryChild} loading="lazy" alt="" src={CountryImage} />
+                            <div className={styles.singaporeWrapper}>
+                                <b className={styles.singapore}>{selectedCountry}</b>
+                                <ArrowDropDownIcon style={{ margin: 0 }} fontSize="small" />
+                            </div>
+                        </div>
+                        {dropdownOpen && (
+                            <div className={styles.countryDropdown}>
+                                {['Austria', 'China', 'France', 'Italy', 'Japan', 'New Zealand', 'Switzerland', 'USA'].map((country) => (
+                                    <div
+                                        key={country}
+                                        className={styles.countryOption}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedCountry(country);
+                                            setDropdownOpen(false);
+                                        }}
+                                    >
+                                        {country}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
-                <div className="tab1">
-                  <b className="tab-11">Test Reports</b>
-                  <div className="borders1">
-                    <div className="rectangle1" />
-                  </div>
-                </div>
-                <div className="tab2">
-                  <b className="tab-12">Comparison</b>
-                  <div className="borders2">
-                    <div className="rectangle2" />
-                  </div>
-                </div>
-                <div className="tab3">
-                  <b className="tab-13">Weather</b>
-                  <div className="borders3">
-                    <div className="rectangle3" />
-                  </div>
-                </div>
-                <div className="tab4">
-                  <b className="tab-14">Ski Lifts</b>
-                  <div className="borders4">
-                    <div className="rectangle4" />
-                  </div>
-                </div>
-                <div className="tab5">
-                  <b className="tab-15">Accommodations</b>
-                  <div className="borders5">
-                    <div className="rectangle5" />
-                  </div>
-                </div>
-                <div className="tab6">
-                  <b className="tab-16">About Us</b>
-                  <div className="borders6">
-                    <div className="rectangle6" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="country-wrapper" >
-            <div className="country" onClick={() => setDropdownOpen(!dropdownOpen)}>
-              <img className="country-child" loading="lazy" alt="" src={CountryImage} />
-              <div className="singapore-wrapper">
-                <b className="singapore">{selectedCountry}</b>
-                <ArrowDropDownIcon fontSize="small" />
-              </div>
-            </div>
-            {dropdownOpen && (
-              <div className="country-dropdown">
-                <div className="country-option" onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedCountry('Austria');
-                  setDropdownOpen(false);
-                }}>Austria
-                </div>
-                <div className="country-option" onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedCountry('China');
-                  setDropdownOpen(false);
-                }}>China
-                </div>
-              </div>
-            )}
-          </div>
+            </header>
         </div>
-      </header>
-    </div>
-  )
+    );
 }
 
-export default Navbar
+export default Navbar;

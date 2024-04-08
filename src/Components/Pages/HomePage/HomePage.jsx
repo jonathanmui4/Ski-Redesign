@@ -1,23 +1,26 @@
+import React from 'react';
 import Navbar from "../../Navbar/Navbar";
 import Search from "../../Search/Search";
-import FrameComponent from "./FrameComponent";
-import "./HomePage.css";
+import FrameComponent from "./FrameComponent.jsx";
+import styles from "./HomePage.module.css";
 import bg from "../../../assets/Images/bg.png";
 
 const HomePage = () => {
   return (
-    <div className="home-page">
-      <img className="home-page-child" alt="" src={bg} />
+    <div className={styles.homePage}>
+      <img className={styles.homePageChild} alt="" src={bg} />
       <Navbar />
-      <div className="f-r-a-m-e-deals-header">
-        <div className="card-list">
-          <h2 className="explore-the-exciting">
+      <div className={styles.frameDealsHeader}>
+        <div className={styles.cardList}>
+          <h2 className={styles.exploreTheExciting}>
             EXPLORE THE EXCITING WORLD OF
           </h2>
-          <h1 className="ski-resorts">SKI RESORTS</h1>
+          <h1 className={styles.skiResorts}>SKI RESORTS</h1>
         </div>
       </div>
-      <Search />
+      <div className={styles.searchBar}>
+        <Search />
+      </div>
       {/* Cards Layout */}
       <FrameComponent />
     </div>

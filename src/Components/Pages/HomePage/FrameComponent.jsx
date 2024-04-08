@@ -1,28 +1,29 @@
-import Card from "./Card";
+import React from 'react';
+import HomeCard from "../../HomeCards/HomeCard";
 import GarmischImage from "../../../assets/Images/Garmisch.png";
 import GrandvaliraImage from '../../../assets/Images/Grandvalira.png';
 import MonteImage from '../../../assets/Images/Monte.png';
-import "./FrameComponent.css";
+import styles from "./FrameComponent.module.css";
 
 const FrameComponent = () => {
   return (
-    <footer className="frame-parent">
-      <div className="frame-group">
-        <div className="vector-wrapper">
+    <footer className={styles.frameParent}>
+      <div className={styles.frameGroup}>
+        <div className={styles.vectorWrapper}>
           <img
-            className="frame-child"
+            className={styles.frameChild}
             loading="lazy"
             alt=""
             src="/line-1.svg"
           />
         </div>
-        <h3 className="best-ski-resort">{`Best Ski Resort Deals `}</h3>
-        <div className="vector-container">
-          <img className="frame-item" loading="lazy" alt="" src="/line-2.svg" />
+        <h3 className={styles.bestSkiResort}>{`Best Ski Resort Deals `}</h3>
+        <div className={styles.vectorContainer}>
+          <img className={styles.frameItem} loading="lazy" alt="" src="/line-2.svg" />
         </div>
       </div>
-      <div className="suggested">
-        <Card
+      <div className={styles.suggested}>
+        <HomeCard
           favoriteBorder="/favoriteborder@2x.png"
           favoriteBorder1="/favoriteborder-1@2x.png"
           aspectRatioKeeperAddition="/aspect-ratio-keeper--additionally-45-rotated-auto-layout@2x.png"
@@ -31,7 +32,7 @@ const FrameComponent = () => {
           prop=" "
           propBackgroundImage={GrandvaliraImage}
         />
-        <Card
+        <HomeCard
           favoriteBorder="/favoriteborder-2@2x.png"
           favoriteBorder1="/favoriteborder-3@2x.png"
           aspectRatioKeeperAddition="/aspect-ratio-keeper--additionally-45-rotated-auto-layout-1@2x.png"
@@ -41,7 +42,7 @@ const FrameComponent = () => {
           propBackgroundImage={GarmischImage}
           propColor="#979ca6"
         />
-        <Card
+        <HomeCard
           favoriteBorder="/favoriteborder-4@2x.png"
           favoriteBorder1="/favoriteborder-5@2x.png"
           aspectRatioKeeperAddition="/aspect-ratio-keeper--additionally-45-rotated-auto-layout-2@2x.png"
