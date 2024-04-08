@@ -17,7 +17,7 @@ export const resorts = [
         name: "Ski Resort Bahama",
         rating: 3,
         price: 140,
-        tags: ["Beginner", "Eco-friendly", "Parking"],
+        tags: ["Beginner", "Parking"],
         image: "resorts/Resort3.png",
     },
     {
@@ -31,14 +31,14 @@ export const resorts = [
         name: "Aloha Resort",
         rating: 2.5,
         price: 129,
-        tags: ["Beginner", "Eco-friendly", "Parking"],
+        tags: ["Beginner"],
         image: "resorts/Resort4.png",
     },
     {
         name: "Resort81",
         rating: 2,
         price: 110,
-        tags: ["Beginner", "Eco-friendly", "Parking"],
+        tags: ["Beginner", "Parking"],
         image: "resorts/Resort5.png",
     },
 ];
