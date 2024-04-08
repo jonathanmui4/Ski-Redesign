@@ -115,7 +115,7 @@ const ResultCard2Column = (props) => {
                             })}
                         </div>
                     </div>
-                    {idx === 0 ? (
+                    {idx === 1 ? (
                         <div className={styles.frame11} onClick={ShowTaskComplete}>
                             <div className={styles.viewDetails}>View Details</div>
                         </div>) 

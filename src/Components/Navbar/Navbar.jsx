@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import styles from "./Navbar.module.css";
 import CountryImage from '../../assets/Images/sg.png';
+import austriaFlag from '../../assets/Images/austria.png';
 import Logo from '../../assets/Images/logo.png';
 import {Link, useLocation} from 'react-router-dom';
 
@@ -42,12 +43,18 @@ const Navbar = () => {
             case "/AM2/home":
                 return "/AM2/results-2";
             case "/AM3/home":
-                return "/AM3/results-3";
+                return "/AM3/results-3";            
             default:
                 return "/";
         }
     };
-    
+
+    // Object mapping country names to their flag image paths
+    const countryFlags = {
+        Singapore: CountryImage,
+        Austria: austriaFlag,
+    }
+
     return (
         <div className={styles.navigationBarWrapper}>
             <header className={styles.navigationBar}>
@@ -108,7 +115,7 @@ const Navbar = () => {
                     </div>
                     <div className={styles.countryWrapper}>
                         <div className={styles.country} onClick={() => setDropdownOpen(!dropdownOpen)}>
-                            <img className={styles.countryChild} loading="lazy" alt="" src={CountryImage} />
+                            <img className={styles.countryChild} loading="lazy" alt="" src={countryFlags[selectedCountry]} />
                             <div className={styles.singaporeWrapper}>
                                 <b className={styles.singapore}>{selectedCountry}</b>
                                 <ArrowDropDownIcon style={{ margin: 0 }} fontSize="small" />
