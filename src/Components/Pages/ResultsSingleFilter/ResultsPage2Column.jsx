@@ -25,6 +25,50 @@ const ResultsPage2Column = () => {
 
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(500);
+    const [filteredAndSortedResorts, setFilteredAndSortedResorts] = useState(
+        []
+    );
+
+    useEffect(() => {
+        // Filter and sort resorts based on the applied filters
+        const filteredResorts = resorts.filter((resort) => {
+            if (state.filters.length === 0) return true;
+            if (
+                state.filters.includes("Beginner") &&
+                !resort.tags.includes("Beginner")
+            )
+                return false;
+            else if (
+                state.filters.includes("Eco-friendly") &&
+                !resort.tags.includes("Eco-friendly")
+            )
+                return false;
+            else if (
+                state.filters.includes("Parking") &&
+                !resort.tags.includes("Parking")
+            )
+                return false;
+            return true; // Modify this line with your filtering logic
+        });
+
+        // Sort the filtered resorts based on price
+        const sortedResorts = filteredResorts.sort((a, b) => {
+            if (
+                state.priFilter === "Rating" ||
+                state.filters.includes("Best Ratings")
+            ) {
+                return b.rating - a.rating;
+            } else if (
+                state.priFilter === "Price" ||
+                state.filters.includes("Price")
+            ) {
+                return a.price - b.price;
+            }
+            return a.name - b.name;
+        });
+
+        setFilteredAndSortedResorts(sortedResorts);
+    }, [state.filters, state.priFilter, minPrice, maxPrice]);
 
     useEffect(() => {
         console.log("Filters: ", state.filters);
@@ -71,7 +115,7 @@ const ResultsPage2Column = () => {
                     </div>
                 </div>
                 <div className={styles.cards}>
-                    {resorts.map((resort, index) => {
+                    {filteredAndSortedResorts.map((resort, index) => {
                         return (
                             <ResultsCard2Column
                                 key={index}
