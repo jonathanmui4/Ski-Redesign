@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard2Column.module.css";
 
-const ResultCard2Column = () => {
-    const imgUrl = "resorts/Resort1.jpeg";
-    const rating = 4.5;
+const ResultCard2Column = (props) => {
+    const { key, name, rating, price, tags, imgUrl } = props;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -59,12 +59,12 @@ const ResultCard2Column = () => {
                         </div>
                         <div className={styles.frame5}>
                             <div className={styles.alpineDreamsResort}>
-                                Alpine Dreams Resort
+                                {name}
                             </div>
                         </div>
                         <div className={styles.frame6}>
                             <div className={styles.viewDetails}>
-                                Starting from $299
+                                Starting from ${price}
                             </div>
                         </div>
                         <div className={styles.frame7}>
@@ -88,6 +88,15 @@ const ResultCard2Column = () => {
             </div>
         </div>
     );
+};
+
+ResultCard2Column.propTypes = {
+    key: PropTypes.number,
+    name: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    tags: PropTypes.array.isRequired,
+    imgUrl: PropTypes.string.isRequired,
 };
 
 export default ResultCard2Column;

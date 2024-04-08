@@ -4,6 +4,7 @@ import Slider from "../Filters/Slider";
 import AdditionalFilters from "../Filters/AdditionalFilters";
 import ResultsCard2Column from "../Cards/ResultCard2Column";
 import FrameComponent1 from "./HomePage/FrameComponent1";
+import { resorts } from "../../content";
 import styles from "./ResultsPage2Column.module.css";
 
 const ResultsPage2Column = () => {
@@ -33,12 +34,18 @@ const ResultsPage2Column = () => {
                     </div>
                 </div>
                 <div className={styles.cards}>
-                    <ResultsCard2Column />
-                    <ResultsCard2Column />
-                    <ResultsCard2Column />
-                    <ResultsCard2Column />
-                    <ResultsCard2Column />
-                    <ResultsCard2Column />
+                    {resorts.map((resort, index) => {
+                        return (
+                            <ResultsCard2Column
+                                key={index}
+                                name={resort.name}
+                                rating={resort.rating}
+                                price={resort.price}
+                                tags={resort.tags}
+                                imgUrl={resort.image}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <div className={styles.frame55}>

@@ -7,7 +7,6 @@ import { resorts } from "../../content";
 import styles from "./ResultsPageSingle1Col.module.css";
 
 const ResultsPageSingle1Col = () => {
-    console.log(resorts);
     return (
         <div className={styles.resultsPageSingle1Col}>
             <div className={styles.content}>
