@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from "./Search.module.css";
-import { useHistory } from 'react-router-dom'; // Import useHistory hook
+import { useNavigate } from 'react-router-dom'; // Import useHistory hook
 
 const Search = () => {
     const [inputValue, setInputValue] = useState('');
-    const history = useHistory(); // Get the history object
+    const history = useNavigate(); // Get the history object
 
     const handleSearch = () => {
         console.log(inputValue); // Here, you can replace the console.log with any functionality you need.

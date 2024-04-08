@@ -305,3 +305,9 @@
       font-size: var(--font-size-base);
   }
 }
+
+.searchBarPlacement {
+  margin-top: 15%;
+  margin-left: -15%;
+  width: 90%;
+}

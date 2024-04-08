@@ -20,7 +20,9 @@ const AsymmetricalHomePage = () => {
         src={bg}
       />
       <Navbar />
-      <Search />
+      <div className={styles.searchBarPlacement}>
+        <Search />
+      </div>
       <div className={styles.asymmetricalHomePageItem} />
       <h2 className={styles.exploreTheExciting}>EXPLORE THE EXCITING WORLD OF</h2>
       <h1 className={styles.skiResorts}>SKI RESORTS</h1>
