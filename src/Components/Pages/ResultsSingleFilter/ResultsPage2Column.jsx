@@ -44,21 +44,25 @@ const ResultsPage2Column = () => {
                         <div className={styles.ratingSliderWrapper}>
                             <div className={styles.ratingSlider}>
                                 <FilterDropdown addFilter={setPriFilter} />
-                                <Slider
-                                    min={0}
-                                    max={500}
-                                    onChange={({ min, max }) => {
-                                        console.log(
-                                            `min = ${min}, max = ${max}`
-                                        );
-                                        setMinPrice(min);
-                                        setMaxPrice(max);
-                                    }}
-                                />
-                                <AdditionalFilters
-                                    addFilters={addFilter}
-                                    removeFilter={removeFilter}
-                                />
+                                {state.priFilter && (
+                                    <Slider
+                                        min={0}
+                                        max={500}
+                                        onChange={({ min, max }) => {
+                                            console.log(
+                                                `min = ${min}, max = ${max}`
+                                            );
+                                            setMinPrice(min);
+                                            setMaxPrice(max);
+                                        }}
+                                    />
+                                )}
+                                {state.priFilter && (
+                                    <AdditionalFilters
+                                        addFilters={addFilter}
+                                        removeFilter={removeFilter}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>
