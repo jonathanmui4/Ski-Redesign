@@ -384,7 +384,7 @@
   background-color: var(--color-darkslateblue);
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1),
       0 0 0#000, 0 0 0#000;
-  overflow: hidden;
+  overflow: visible;
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--color-whitesmoke);
@@ -418,12 +418,11 @@
 .countryOption {
   padding: 8px 12px; /* Add padding for each option */
   cursor: pointer; /* Change cursor to indicate interactivity */
-  list-style: none; /* Remove list styling */
   color: black;
   white-space: nowrap; /* Prevent text from wrapping to the next line */
   overflow: hidden; /* Hide overflowed text */
   text-overflow: ellipsis; /* Add ellipsis to overflowed text */
-  z-index: 1000;
+  z-index: 4;
 }
 
 .countryOption:hover {
