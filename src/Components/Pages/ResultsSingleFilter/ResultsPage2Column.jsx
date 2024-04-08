@@ -11,6 +11,24 @@ import styles from "./ResultsPage2Column.module.css";
 const ResultsPage2Column = () => {
     const [state, dispatch] = useReducer(TwoColumnReducer, initialState);
 
+    const [clickCount, setClickCount] = useState(0);
+
+    useEffect(() => {
+      const handleClick = () => {
+        setClickCount(prevCount => prevCount + 1);
+      };
+  
+      document.addEventListener('click', handleClick);
+  
+      return () => {
+        document.removeEventListener('click', handleClick);
+      };
+    }, []);
+  
+    useEffect(() => {
+      sessionStorage.setItem('clicksr2', clickCount);
+    }, [clickCount]);
+
     const addFilter = (filter) => {
         dispatch({ type: "ADD_FILTER", payload: filter });
     };

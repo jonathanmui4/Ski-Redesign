@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Suggested from './Suggested';
 import Navbar from '../../Navbar/Navbar';
 import Search from '../../Search/Search';
@@ -6,6 +6,24 @@ import styles from './AsymmetricalHomePage.module.css';
 import bg from '../../../assets/Images/bg.png';
 
 const AsymmetricalHomePage = () => {
+  const [clickCount, setClickCount] = useState(0);
+
+  useEffect(() => {
+    const handleClick = () => {
+      setClickCount(prevCount => prevCount + 1);
+    };
+
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem('homea', clickCount);
+  }, [clickCount]);
+
   const [inputValue, setInputValue] = useState('');
 
   const handleSearch = () => {

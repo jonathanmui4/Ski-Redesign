@@ -11,6 +11,24 @@ import styles from "./ResultsPage3Column.module.css";
 const ResultsPage3Column = () => {
     const [state, dispatch] = useReducer(ThreeColumnReducer, initialState);
 
+    const [clickCount, setClickCount] = useState(0);
+
+    useEffect(() => {
+      const handleClick = () => {
+        setClickCount(prevCount => prevCount + 1);
+      };
+  
+      document.addEventListener('click', handleClick);
+  
+      return () => {
+        document.removeEventListener('click', handleClick);
+      };
+    }, []);
+  
+    useEffect(() => {
+      sessionStorage.setItem('clicksr3', clickCount);
+    }, [clickCount]);
+
     const addFilter = (filter) => {
         dispatch({ type: "ADD_FILTER", payload: filter });
     };

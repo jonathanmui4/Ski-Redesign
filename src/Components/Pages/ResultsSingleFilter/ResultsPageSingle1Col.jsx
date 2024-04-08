@@ -11,6 +11,24 @@ import styles from "./ResultsPageSingle1Col.module.css";
 const ResultsPageSingle1Col = () => {
     const [state, dispatch] = useReducer(OneColumnReducer, initialState);
 
+    const [clickCount, setClickCount] = useState(0);
+
+    useEffect(() => {
+      const handleClick = () => {
+        setClickCount(prevCount => prevCount + 1);
+      };
+  
+      document.addEventListener('click', handleClick);
+  
+      return () => {
+        document.removeEventListener('click', handleClick);
+      };
+    }, []);
+  
+    useEffect(() => {
+      sessionStorage.setItem('clicksr1', clickCount);
+    }, [clickCount]);
+
     const addFilter = (filter) => {
         dispatch({ type: "ADD_FILTER", payload: filter });
     };

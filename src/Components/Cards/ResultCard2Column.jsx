@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard2Column.module.css";
 import { useNavigate } from "react-router-dom";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ResultCard2Column = (props) => {
     const { idx, name, rating, price, tags, imgUrl } = props;
