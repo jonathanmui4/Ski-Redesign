@@ -3,6 +3,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import styles from "./Navbar.module.css";
 import CountryImage from '../../assets/Images/sg.png';
 import Logo from '../../assets/Images/logo.png';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -24,12 +25,10 @@ const Navbar = () => {
                             </div>
                             <div className={styles.frame1}>
                                 <div className={styles.tab}>
-                                    <a href="" target="_blank" rel="noopener noreferrer">
-                                        <b className={styles.tab1}>All Ski Resorts</b>
-                                    </a>
-                                    <div className={styles.borders}>
-                                        <div className={styles.rectangle} />
-                                    </div>
+                                    {/* Search Results 1/2/3 columns */}
+                                    <Link to="/results-1" className={styles.tab1}>All Ski Resorts</Link>
+                                    {/* <Link to="/results-1" className={styles.tab1}>All Ski Resorts</Link> */}
+                                    {/* <Link to="/results-1" className={styles.tab1}>All Ski Resorts</Link> */}
                                 </div>
                                 <div className={styles.tab1}>
                                     <b className={styles.tab11}>Test Reports</b>

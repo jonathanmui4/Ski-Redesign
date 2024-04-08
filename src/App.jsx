@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import HomeCentralised from './components/Pages/HomePage/HomePage.jsx';
-import HomeAsymmetrical from './components/Pages/HomePage2/AsymmetricalHomePage.jsx'
-import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/ResultsPageSingle1Col.jsx";
-import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
-import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
-import ErrorPage from "./components/Pages/ErrorPage.jsx";
+import HomeCentralised from './Components/Pages/HomePage/HomePage.jsx';
+import HomeAsymmetrical from './Components/Pages/HomePage2/AsymmetricalHomePage.jsx'
+import ResultsPageSingle1Col from "./Components/Pages/ResultsSingleFilter/ResultsPageSingle1Col.jsx";
+import ResultsPage2Column from "./Components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
+import ResultsPage3Column from "./Components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
+import ErrorPage from "./Components/Pages/ErrorPage.jsx";
 
 function App() {
     return (
