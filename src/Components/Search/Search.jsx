@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import "./FavoriteborderShape.css";
+import "./Search.css";
 
-const FavoriteborderShape = () => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleSearch = () => {
-    console.log(inputValue); // Here, you can replace the console.log with any functionality you need.
-  };
+const Search = () => {
+    const [inputValue, setInputValue] = useState('');
+    const handleSearch = () => {
+        console.log(inputValue); // Here, you can replace the console.log with any functionality you need.
+      };
 
   return (
     <div className="favoriteborder-shape">
@@ -31,8 +30,7 @@ const FavoriteborderShape = () => {
           <b className="search">Search</b>
         </button>
       </div>
-    </div>
-  );
-};
+    </div>  )
+}
 
-export default FavoriteborderShape;
+export default Search

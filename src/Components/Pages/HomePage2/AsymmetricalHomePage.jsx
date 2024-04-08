@@ -1,9 +1,17 @@
+import React, { useState } from 'react';
 import Suggested from "./Suggested";
-import NavigationBar from "./NavigationBar";
+import Navbar from "../../Navbar/Navbar";
+import Search from "../../Search/Search";
 import "./AsymmetricalHomePage.css";
 import bg from "../../../assets/Images/bg.png";
 
 const AsymmetricalHomePage = () => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSearch = () => {
+    console.log(inputValue); // Here, you can replace the console.log with any functionality you need.
+  };
+
   return (
     <div className="asymmetrical-home-page">
       <img
@@ -11,24 +19,10 @@ const AsymmetricalHomePage = () => {
         alt=""
         src={bg}
       />
-      <NavigationBar />
-      <div className="search-bar">
-        <div className="input-wrapper">
-          <div className="input">
-            <div className="title">
-              Search for ski resorts, regions, terms ...
-            </div>
-            <div className="text-button-wrapper">
-              <div className="text-button">
-                <b className="clear">Clear</b>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="search-wrapper">
-          <b className="search">Search</b>
-        </button>
-      </div>
+      <Navbar />
+
+      <Search />
+
       <div className="asymmetrical-home-page-item" />
       <h2 className="explore-the-exciting">EXPLORE THE EXCITING WORLD OF</h2>
       <h1 className="ski-resorts">SKI RESORTS</h1>
@@ -52,6 +46,7 @@ const AsymmetricalHomePage = () => {
             />
           </div>
         </div>
+        {/* Cards Layout */}
         <Suggested />
       </div>
     </div>

@@ -1,9 +1,9 @@
-import ResultCard1ColumndiffArra from "../Cards/ResultCard1ColumndiffArra";
-import AdditionalFilters from "../Filters/AdditionalFilters";
-import FilterDropdown from "../Filters/FilterDropdown";
-import Slider from "../Filters/Slider";
-import FrameComponent1 from "./HomePage/FrameComponent1";
-import { resorts } from "../../content";
+import ResultCard1ColumndiffArra from "../../Cards/ResultCard1ColumndiffArra";
+import AdditionalFilters from "../../Filters/AdditionalFilters";
+import FilterDropdown from "../../Filters/FilterDropdown";
+import Slider from "../../Filters/Slider";
+import Navbar from "../../Navbar/Navbar";
+import { resorts } from "../../../content";
 import styles from "./ResultsPageSingle1Col.module.css";
 
 const ResultsPageSingle1Col = () => {
@@ -53,7 +53,7 @@ const ResultsPageSingle1Col = () => {
                     </div>
                 </div>
             </div>
-            <FrameComponent1 />
+            <Navbar />
         </div>
     );
 };

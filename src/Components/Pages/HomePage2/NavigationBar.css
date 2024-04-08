@@ -267,11 +267,12 @@
 }
 .singapore-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: column; /* Changed from column to row */
+  align-items: flex-start; /* Align items vertically */
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 0;
 }
+
 .teenyiconsdown-solid {
   width: 10px;
   height: 5px;
@@ -280,6 +281,7 @@
   overflow: visible;
   flex-shrink: 0;
 }
+
 .t-e-x-t-search-label {
   height: 20px;
   flex-direction: column;

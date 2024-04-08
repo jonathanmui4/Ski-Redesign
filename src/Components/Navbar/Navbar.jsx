@@ -1,12 +1,12 @@
-import "./FrameComponent1.css";
-import CountryImage from '../../../assets/Images/sg.png';
-import Logo from '../../../assets/Images/logo.png';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import React, { useState } from 'react';
+import "./Navbar.css";
+import CountryImage from '../../assets/Images/sg.png';
+import Logo from '../../assets/Images/logo.png';
 
-const FrameComponent1 = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState('Singapore');
+const Navbar = () => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [selectedCountry, setSelectedCountry] = useState('Singapore');
 
   return (
     <div className="navigation-bar-wrapper">
@@ -70,8 +70,8 @@ const FrameComponent1 = () => {
               </div>
             </div>
           </div>
-          <div className="country-wrapper" onClick={() => setDropdownOpen(!dropdownOpen)}>
-            <div className="country">
+          <div className="country-wrapper" >
+            <div className="country" onClick={() => setDropdownOpen(!dropdownOpen)}>
               <img className="country-child" loading="lazy" alt="" src={CountryImage} />
               <div className="singapore-wrapper">
                 <b className="singapore">{selectedCountry}</b>
@@ -86,14 +86,19 @@ const FrameComponent1 = () => {
                   setDropdownOpen(false);
                 }}>Austria
                 </div>
-                {/* Add more countries as needed */}
+                <div className="country-option" onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedCountry('China');
+                  setDropdownOpen(false);
+                }}>China
+                </div>
               </div>
             )}
           </div>
         </div>
       </header>
     </div>
-  );
-};
+  )
+}
 
-export default FrameComponent1;
+export default Navbar

@@ -1,10 +1,10 @@
 import React from "react";
-import FrameComponent1 from "./HomePage/FrameComponent1";
-import FilterDropdown from "../Filters/FilterDropdown";
-import Slider from "../Filters/Slider";
-import AdditionalFilters from "../Filters/AdditionalFilters";
-import ResultCard3Column from "../Cards/ResultCard3Column";
-import { resorts } from "../../content";
+import Navbar from "../../Navbar/Navbar";
+import FilterDropdown from "../../Filters/FilterDropdown";
+import Slider from "../../Filters/Slider";
+import AdditionalFilters from "../../Filters/AdditionalFilters";
+import ResultCard3Column from "../../Cards/ResultCard3Column";
+import { resorts } from "../../../content";
 import styles from "./ResultsPage3Column.module.css";
 
 const ResultsPage3Column = () => {
@@ -54,7 +54,7 @@ const ResultsPage3Column = () => {
                     </div>
                 </div>
             </div>
-            <FrameComponent1 />
+            <Navbar />
         </div>
     );
 };

@@ -2,8 +2,12 @@ import "./NavigationBar.css";
 import CountryImage from '../../../assets/Images/sg.png';
 import Logo from '../../../assets/Images/logo.png';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import React, { useState } from 'react';
 
 const NavigationBar = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('Singapore');
+
   return (
     <div className="navigation-bar-wrapper">
       <header className="navigation-bar">
@@ -66,23 +70,25 @@ const NavigationBar = () => {
               </div>
             </div>
           </div>
-          <div className="country-wrapper">
+          <div className="country-wrapper" onClick={() => setDropdownOpen(!dropdownOpen)}>
             <div className="country">
-              <img
-                className="country-child"
-                loading="lazy"
-                alt=""
-                src={CountryImage}
-              />
+              <img className="country-child" loading="lazy" alt="" src={CountryImage} />
               <div className="singapore-wrapper">
-                <b className="singapore">Singapore</b>
-              </div>
-              <div className="t-e-x-t-search-label">
-                <div className="teenyiconsdown-solid">
-                  <ArrowDropDownIcon fontSize="small" />
-                </div>
+                <b className="singapore">{selectedCountry}</b>
+                <ArrowDropDownIcon fontSize="small" />
               </div>
             </div>
+            {dropdownOpen && (
+              <div className="country-dropdown">
+                <div className="country-option" onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedCountry('Austria');
+                  setDropdownOpen(false);
+                }}>Austria
+                </div>
+                {/* Add more countries as needed */}
+              </div>
+            )}
           </div>
         </div>
       </header>
