@@ -4,11 +4,19 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard2Column.module.css";
 
 const ResultCard2Column = (props) => {
-    const { key, name, rating, price, tags, imgUrl } = props;
+    const { idx, name, rating, price, tags, imgUrl } = props;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
     const hasHalfStar = rating - fullStars >= 0.5;
+
+    console.log("Key: " + idx);
+
+    const ShowTaskComplete = () => {
+        // Link to task complete page
+
+        // Stop timer
+    }
 
     return (
         <div className={styles.resultCard2ColumnsameArra}>
@@ -106,9 +114,14 @@ const ResultCard2Column = (props) => {
                             })}
                         </div>
                     </div>
-                    <div className={styles.frame11}>
+                    {idx === 0 ? (<div className={styles.frame11} onClick={ShowTaskComplete()}>
                         <div className={styles.viewDetails}>View Details</div>
-                    </div>
+                    </div>) 
+                    : 
+                    (<div className={styles.frame11}>
+                        <div className={styles.viewDetails}>View Details</div>
+                    </div>)}
+
                 </div>
             </div>
         </div>
@@ -116,7 +129,7 @@ const ResultCard2Column = (props) => {
 };
 
 ResultCard2Column.propTypes = {
-    key: PropTypes.number,
+    idx: PropTypes.number,
     name: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     price: PropTypes.number.isRequired,

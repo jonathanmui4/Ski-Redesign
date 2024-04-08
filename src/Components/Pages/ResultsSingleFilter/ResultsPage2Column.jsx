@@ -116,9 +116,10 @@ const ResultsPage2Column = () => {
                 </div>
                 <div className={styles.cards}>
                     {filteredAndSortedResorts.map((resort, index) => {
+                        console.log("Key frm page: " + index);
                         return (
                             <ResultsCard2Column
-                                key={index}
+                                idx={index}
                                 name={resort.name}
                                 rating={resort.rating}
                                 price={resort.price}
