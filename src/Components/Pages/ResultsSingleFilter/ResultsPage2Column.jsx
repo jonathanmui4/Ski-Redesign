@@ -6,7 +6,6 @@ import ResultsCard2Column from "../../Cards/ResultCard2Column";
 import Navbar from "../../Navbar/Navbar";
 import { resorts } from "../../../content";
 import { initialState, TwoColumnReducer } from "./TwoColumnReducer";
-// import { initialState, results2ColumnReducer } from "./Results2ColumnReducer";
 import styles from "./ResultsPage2Column.module.css";
 
 const ResultsPage2Column = () => {
@@ -24,15 +23,18 @@ const ResultsPage2Column = () => {
         dispatch({ type: "SET_PRI_FILTER", payload: filter });
     };
 
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(500);
+
     useEffect(() => {
         console.log("Filters: ", state.filters);
         console.log("Primary Filter: ", state.priFilter);
     }, [state.filters, state.priFilter]);
 
     useEffect(() => {
-        console.log("min price: ", state.minPrice);
-        console.log("max price: ", state.maxPrice);
-    }, [state.minPrice, state.maxPrice]);
+        console.log("min price: ", minPrice);
+        console.log("max price: ", maxPrice);
+    }, [minPrice, maxPrice]);
 
     return (
         <div className={styles.resultsPageSingle2Col}>
@@ -49,6 +51,8 @@ const ResultsPage2Column = () => {
                                         console.log(
                                             `min = ${min}, max = ${max}`
                                         );
+                                        setMinPrice(min);
+                                        setMaxPrice(max);
                                     }}
                                 />
                                 <AdditionalFilters
