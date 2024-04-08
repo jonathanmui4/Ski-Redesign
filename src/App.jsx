@@ -6,6 +6,7 @@ import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/Result
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
+import CompletionPage from "./Components/Pages/CompletionPage.jsx";
 
 function App() {
     const location = useLocation(); // This hook gives you the current location
@@ -70,6 +71,8 @@ function App() {
             <Route path="/CM1/results-1" element={<ResultsPageSingle1Col />} />
             <Route path="/CM2/results-2" element={<ResultsPage2Column />} />
             <Route path="/CM3/results-3" element={<ResultsPage3Column />} /> */}
+
+            <Route path="/completionpage" element={<CompletionPage />} />
         </Routes>
     );
 }

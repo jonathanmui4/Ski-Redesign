@@ -114,6 +114,7 @@
     text-align: center;
     font-size: var(--button-medium-size);
     color: var(--white);
+    cursor: pointer;
 }
 .frameParent {
     gap: var(--gap-5xl);

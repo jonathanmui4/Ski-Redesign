@@ -125,6 +125,7 @@
     text-align: center;
     font-size: var(--button-medium-size);
     color: var(--black-white-white);
+    cursor: pointer;
 }
 .frameParent {
     align-self: stretch;
