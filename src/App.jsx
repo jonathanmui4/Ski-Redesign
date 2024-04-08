@@ -5,6 +5,7 @@ import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/Result
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
+import Multi1Col from "./components/Pages/ResultsMultiFilter/Multi1Col.jsx";
 
 function App() {
     return (
@@ -17,6 +18,8 @@ function App() {
             <Route path="/results-1" element={<ResultsPageSingle1Col />} />
             <Route path="/results-2" element={<ResultsPage2Column />} />
             <Route path="/results-3" element={<ResultsPage3Column />} />
+
+            <Route path="/AM/results-1" element={<Multi1Col />} />
         </Routes>
     );
 }
