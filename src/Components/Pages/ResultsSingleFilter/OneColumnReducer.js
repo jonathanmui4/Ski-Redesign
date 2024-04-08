@@ -3,7 +3,7 @@ export const initialState = {
     priFilter: "",
 };
 
-export const TwoColumnReducer = (state, action) => {
+export const OneColumnReducer = (state, action) => {
     switch (action.type) {
         case "ADD_FILTER":
             return {

@@ -44,7 +44,7 @@ const ResultsPage2Column = () => {
             )
                 return false;
             else if (
-                state.filters.includes("Parking") &&
+                state.filters.includes("With Parking") &&
                 !resort.tags.includes("Parking")
             )
                 return false;
