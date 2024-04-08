@@ -6,7 +6,7 @@ import React from 'react';
 
 const ResultCard2Column = (props) => {
     const { idx, name, rating, price, tags, imgUrl } = props;
-    let navigate = useNavigate();    
+    const navigate = useNavigate();    
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -17,8 +17,6 @@ const ResultCard2Column = (props) => {
     const ShowTaskComplete = () => {
         // Navigate to the completion page
         navigate('/completionpage');
-        
-        // Stop timer
     }
 
     return (

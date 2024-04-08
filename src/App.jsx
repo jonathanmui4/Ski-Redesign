@@ -6,7 +6,7 @@ import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/Result
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
-import CompletionPage from "./Components/Pages/CompletionPage.jsx";
+import CompletionPage from "./components/Pages/CompletionPage.jsx";
 
 function App() {
     const location = useLocation(); // This hook gives you the current location
