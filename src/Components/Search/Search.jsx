@@ -1,28 +1,18 @@
 import React, { useState } from 'react';
 import styles from "./Search.module.css";
-import { useNavigate } from 'react-router-dom'; // Import useHistory hook
+import { useNavigate, useLocation, Navigate } from 'react-router-dom'; // Import useHistory hook
 
 const Search = () => {
     const [inputValue, setInputValue] = useState('');
     const history = useNavigate(); // Get the history object
+    const location = useLocation();
+    const id = location.pathname;
 
     const handleSearch = () => {
         console.log(inputValue); // Here, you can replace the console.log with any functionality you need.
         const destinationLink = getDestinationLink(); // Get the destination link
-        history.push(destinationLink); // Navigate to the destination link
+        history(destinationLink); // Navigate to the destination link
     };
-
-    // Get the current URL
-    const currentURL = window.location.href;
-
-    // Parse the URL
-    const url = new URL(currentURL);
-
-    // Extract the path from the URL
-    const path = url.pathname;
-
-    // Extract the ID from the path
-    const id = path.substring(1); // Remove the leading slash
 
     // Function to determine the destination link based on id.
     const getDestinationLink = () => {

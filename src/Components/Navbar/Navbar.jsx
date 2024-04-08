@@ -3,23 +3,14 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import styles from "./Navbar.module.css";
 import CountryImage from '../../assets/Images/sg.png';
 import Logo from '../../assets/Images/logo.png';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState('Singapore');
 
-    // Get the current URL
-    const currentURL = window.location.href;
-
-    // Parse the URL
-    const url = new URL(currentURL);
-
-    // Extract the path from the URL
-    const path = url.pathname;
-
-    // Extract the ID from the path
-    const id = path.substring(1); // Remove the leading slash
+    const location = useLocation();
+    const id = location.pathname;
 
     // Function to determine the destination link based on id.
     const getDestinationLink = () => {

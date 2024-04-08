@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import HomeCentralised from "./components/Pages/HomePage/HomePage.jsx";
 import HomeAsymmetrical from "./components/Pages/HomePage2/AsymmetricalHomePage.jsx";
 import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/ResultsPageSingle1Col.jsx";
@@ -7,6 +8,28 @@ import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPa
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 
 function App() {
+    const location = useLocation(); // This hook gives you the current location
+
+    useEffect(() => {
+        // This effect will run once on initial render
+        const startTime = Date.now();
+        sessionStorage.setItem('startTime', startTime);
+        console.log('Page loading started at:', startTime);
+
+        // Optional: Track page changes
+        return () => {
+            const endTime = Date.now();
+            const duration = endTime - startTime;
+            console.log(`User spent ${duration} ms before navigating away or reloading.`);
+            // Here you could also send this data to an analytics endpoint
+        };
+    }, []); // Empty dependency array means this effect runs once on mount
+
+    useEffect(() => {
+        // This effect runs every time the location changes
+        console.log(`Navigated to ${location.pathname}`);
+    }, [location]); // Dependency on location means this effect runs on location change
+
     return (
         <Routes>
             <Route path="*" element={<ErrorPage />} />
