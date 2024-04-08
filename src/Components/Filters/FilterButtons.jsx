@@ -4,12 +4,15 @@ import { FiPlus } from "react-icons/fi";
 import PropTypes from "prop-types";
 import styles from "./FilterButtons.module.css";
 
-const FilterButtons = ({ text }) => {
+const FilterButtons = ({ text, addFilter, removeFilter }) => {
     const [buttonClicked, setButtonClicked] = useState(false);
     return (
         <div
             className={buttonClicked ? styles.button1 : styles.button2}
-            onClick={() => setButtonClicked(!buttonClicked)}
+            onClick={() => {
+                setButtonClicked(!buttonClicked);
+                buttonClicked ? removeFilter(text) : addFilter(text);
+            }}
         >
             <div className={styles.icons}>
                 {buttonClicked ? <FaCheck size={18} /> : <FiPlus size={18} />}
@@ -20,7 +23,9 @@ const FilterButtons = ({ text }) => {
 };
 
 FilterButtons.propTypes = {
-    text: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    addFilter: PropTypes.func.isRequired,
+    removeFilter: PropTypes.func.isRequired,
 };
 
 export default FilterButtons;

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import PropTypes from "prop-types";
 import styles from "./FilterDropdown.module.css";
 import DropdownOptions from "./DropdownOptions";
 
-const FilterDropdown = () => {
+const FilterDropdown = (props) => {
+    const { addFilter } = props;
     const [showDropdown, setShowDropdown] = useState(false);
     const [selectedOption, setSelectedOption] = useState("Pick an option");
 
@@ -32,32 +34,41 @@ const FilterDropdown = () => {
                             text="Rating"
                             setSelectedOption={setSelectedOption}
                             hideDropdown={hideDropdown}
+                            addFilter={addFilter}
                         />
                         <DropdownOptions
                             text="Price"
                             setSelectedOption={setSelectedOption}
                             hideDropdown={hideDropdown}
+                            addFilter={addFilter}
                         />
                         <DropdownOptions
                             text="Slope Difficulty"
                             setSelectedOption={setSelectedOption}
                             hideDropdown={hideDropdown}
+                            addFilter={addFilter}
                         />
                         <DropdownOptions
                             text="Lifts"
                             setSelectedOption={setSelectedOption}
                             hideDropdown={hideDropdown}
+                            addFilter={addFilter}
                         />
                         <DropdownOptions
                             text="Parking"
                             setSelectedOption={setSelectedOption}
                             hideDropdown={hideDropdown}
+                            addFilter={addFilter}
                         />
                     </div>
                 )}
             </div>
         </div>
     );
+};
+
+FilterDropdown.propTypes = {
+    addFilter: PropTypes.func,
 };
 
 export default FilterDropdown;
