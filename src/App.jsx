@@ -5,6 +5,7 @@ import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/Result
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
+import Multi1Col from "./components/Pages/ResultsMultiFilter/Multi1Col.jsx";
 
 function App() {
     return (
