@@ -121,7 +121,6 @@ const ResultCard2Column = (props) => {
                     (<div className={styles.frame11}>
                         <div className={styles.viewDetails}>View Details</div>
                     </div>)}
-
                 </div>
             </div>
         </div>

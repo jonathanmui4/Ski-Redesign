@@ -116,7 +116,7 @@ const ResultsPageSingle1Col = () => {
                     {filteredAndSortedResorts.map((resort, index) => {
                         return (
                             <ResultCard1ColumndiffArra
-                                key={index}
+                                idx={index}
                                 name={resort.name}
                                 rating={resort.rating}
                                 price={resort.price}

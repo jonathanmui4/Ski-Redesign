@@ -116,7 +116,7 @@ const ResultsPage3Column = () => {
                     {filteredAndSortedResorts.map((resort, index) => {
                         return (
                             <ResultCard3Column
-                                key={index}
+                                idx={index}
                                 name={resort.name}
                                 rating={resort.rating}
                                 price={resort.price}

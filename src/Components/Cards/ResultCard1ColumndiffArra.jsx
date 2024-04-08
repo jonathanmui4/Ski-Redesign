@@ -3,11 +3,20 @@ import PropTypes from "prop-types";
 import styles from "./ResultCard1ColumndiffArra.module.css";
 
 const ResultCard1ColumndiffArra = (props) => {
-    const { key, name, rating, price, tags, imgUrl } = props;
+    const { idx, name, rating, price, tags, imgUrl } = props;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
     const hasHalfStar = rating - fullStars >= 0.5;
+
+    console.log("Key: " + idx);
+
+    const ShowTaskComplete = () => {
+        // Link to task complete page
+
+        // Stop timer
+    }
+
     return (
         <div className={styles.resultCard1ColumndiffArra}>
             <div
@@ -106,11 +115,13 @@ const ResultCard1ColumndiffArra = (props) => {
                                 }
                             })}
                         </div>
-                        <div className={styles.frame9}>
-                            <div className={styles.viewDetails}>
-                                View Details
-                            </div>
-                        </div>
+                        {idx === 0 ? (<div className={styles.frame9} onClick={ShowTaskComplete()}>
+                        <div className={styles.viewDetails}>View Details</div>
+                        </div>) 
+                        : 
+                        (<div className={styles.frame9}>
+                            <div className={styles.viewDetails}>View Details</div>
+                        </div>)}
                     </div>
                 </div>
             </div>
@@ -119,7 +130,7 @@ const ResultCard1ColumndiffArra = (props) => {
 };
 
 ResultCard1ColumndiffArra.propTypes = {
-    key: PropTypes.number,
+    idx: PropTypes.number,
     name: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     price: PropTypes.number.isRequired,
