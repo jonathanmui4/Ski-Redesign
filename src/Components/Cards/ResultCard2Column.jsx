@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import React from 'react';
 
 const ResultCard2Column = (props) => {
-    const { idx, name, rating, price, tags, imgUrl } = props;
+    const { idx, name, rating, price, tags, imgUrl} = props;
     let navigate = useNavigate();    
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
@@ -16,7 +16,7 @@ const ResultCard2Column = (props) => {
 
     const ShowTaskComplete = () => {
         // Navigate to the completion page
-        navigate('/completionpage');
+            navigate('/completionpage');
         
         // Stop timer
     }
@@ -117,7 +117,7 @@ const ResultCard2Column = (props) => {
                             })}
                         </div>
                     </div>
-                    {idx === 0 ? (
+                    {idx === 1 ? (
                         <div className={styles.frame11} onClick={ShowTaskComplete}>
                             <div className={styles.viewDetails}>View Details</div>
                         </div>) 
