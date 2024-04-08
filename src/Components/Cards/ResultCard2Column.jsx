@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard2Column.module.css";
 
-const ResultCard2Column = () => {
-    const imgUrl = "resorts/Resort1.jpeg";
-    const rating = 4.5;
+const ResultCard2Column = (props) => {
+    const { key, name, rating, price, tags, imgUrl } = props;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -59,26 +59,51 @@ const ResultCard2Column = () => {
                         </div>
                         <div className={styles.frame5}>
                             <div className={styles.alpineDreamsResort}>
-                                Alpine Dreams Resort
+                                {name}
                             </div>
                         </div>
                         <div className={styles.frame6}>
                             <div className={styles.viewDetails}>
-                                Starting from $299
+                                Starting from ${price}
                             </div>
                         </div>
                         <div className={styles.frame7}>
-                            <div className={styles.frame8}>
-                                <div className={styles.beginner}>Beginner</div>
-                            </div>
-                            <div className={styles.frame9}>
-                                <div className={styles.beginner}>
-                                    Eco-friendly
-                                </div>
-                            </div>
-                            <div className={styles.frame10}>
-                                <div className={styles.beginner}>Parking</div>
-                            </div>
+                            {tags.map((tag, index) => {
+                                if (tag === "Beginner") {
+                                    return (
+                                        <div
+                                            className={styles.beginnerTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                {tag}
+                                            </div>
+                                        </div>
+                                    );
+                                } else if (tag === "Eco-friendly") {
+                                    return (
+                                        <div
+                                            className={styles.ecoTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                {tag}
+                                            </div>
+                                        </div>
+                                    );
+                                } else if (tag === "Parking") {
+                                    return (
+                                        <div
+                                            className={styles.parkingTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                {tag}
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                            })}
                         </div>
                     </div>
                     <div className={styles.frame11}>
@@ -88,6 +113,15 @@ const ResultCard2Column = () => {
             </div>
         </div>
     );
+};
+
+ResultCard2Column.propTypes = {
+    key: PropTypes.number,
+    name: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    tags: PropTypes.array.isRequired,
+    imgUrl: PropTypes.string.isRequired,
 };
 
 export default ResultCard2Column;

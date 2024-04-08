@@ -4,8 +4,6 @@ import styles from "./ResultCard1ColumndiffArra.module.css";
 
 const ResultCard1ColumndiffArra = (props) => {
     const { key, name, rating, price, tags, imgUrl } = props;
-    // const imgUrl = "resorts/Resort1.jpeg";
-    // const rating = 4.5;
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -71,17 +69,42 @@ const ResultCard1ColumndiffArra = (props) => {
                             </div>
                         </div>
                         <div className={styles.frame5}>
-                            <div className={styles.frame6}>
-                                <div className={styles.beginner}>Beginner</div>
-                            </div>
-                            <div className={styles.frame7}>
-                                <div className={styles.beginner}>
-                                    Eco-friendly
-                                </div>
-                            </div>
-                            <div className={styles.frame8}>
-                                <div className={styles.beginner}>Parking</div>
-                            </div>
+                            {tags.map((tag, index) => {
+                                if (tag === "Beginner") {
+                                    return (
+                                        <div
+                                            className={styles.beginnerTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                Beginner
+                                            </div>
+                                        </div>
+                                    );
+                                } else if (tag === "Eco-friendly") {
+                                    return (
+                                        <div
+                                            className={styles.ecoTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                Eco-friendly
+                                            </div>
+                                        </div>
+                                    );
+                                } else if (tag === "Parking") {
+                                    return (
+                                        <div
+                                            className={styles.parkingTag}
+                                            key={index}
+                                        >
+                                            <div className={styles.tagLabel}>
+                                                Parking
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                            })}
                         </div>
                         <div className={styles.frame9}>
                             <div className={styles.viewDetails}>

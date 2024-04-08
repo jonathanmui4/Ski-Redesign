@@ -56,14 +56,14 @@
     width: 303px;
     height: 24px;
 }
-.beginner {
+.tagLabel {
     position: relative;
     line-height: 16px;
     font-weight: 500;
 }
-.frame6,
-.frame7,
-.frame8 {
+.beginnerTag,
+.ecoTag,
+.parkingTag {
     border-radius: var(--br-9980xl);
     background-color: #5379ce;
     display: flex;
@@ -72,11 +72,11 @@
     justify-content: center;
     padding: var(--padding-9xs) var(--padding-xs);
 }
-.frame7,
-.frame8 {
+.ecoTag,
+.parkingTag {
     background-color: #33a35c;
 }
-.frame8 {
+.parkingTag {
     background-color: #ec8220;
     flex-wrap: wrap;
     padding: var(--padding-9xs) 11px;

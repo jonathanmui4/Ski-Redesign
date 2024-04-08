@@ -47,14 +47,14 @@
     justify-content: flex-start;
     font-size: var(--button-medium-size);
 }
-.beginner {
+.tagLabel {
     position: relative;
     line-height: 16px;
     font-weight: 500;
 }
-.frame7,
-.frame8,
-.frame9 {
+.beginnerTag,
+.ecoTag,
+.parkingTag {
     border-radius: var(--br-9980xl);
     background-color: var(--color-cornflowerblue-100);
     display: flex;
@@ -63,11 +63,11 @@
     justify-content: center;
     padding: var(--padding-9xs) var(--padding-xs);
 }
-.frame8,
-.frame9 {
+.ecoTag,
+.parkingTag {
     background-color: var(--color-mediumseagreen);
 }
-.frame9 {
+.parkingTag {
     background-color: var(--color-darkorange);
     padding: var(--padding-9xs) var(--padding-2xs);
 }
