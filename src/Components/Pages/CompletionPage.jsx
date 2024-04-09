@@ -13,7 +13,7 @@ const CompletionPage = () => {
         setTotalTime(duration);
     }
 
-    // const clicksfromResults1 = sessionStorage.getItem('clicksr1') || '0';
+    const clicksfromResults1 = sessionStorage.getItem('clicksr1') || '0';
     const clicksfromResults2 = sessionStorage.getItem('clicksr2') || '0';
     const clicksfromResults3 = sessionStorage.getItem('clicksr3') || '0';
     const clicksfromHomeC = sessionStorage.getItem('homec') || '0';
@@ -21,7 +21,7 @@ const CompletionPage = () => {
   
     // Parse each click count as an integer before adding them together
     // Using '0' as a default value for parseInt to avoid NaN
-    const totalClicks = [clicksFromHomeA, clicksfromHomeC, clicksfromResults2, clicksfromResults3]
+    const totalClicks = [clicksFromHomeA, clicksfromHomeC, clicksfromResults1, clicksfromResults2, clicksfromResults3]
       .map(click => parseInt(click, 10))
       .reduce((acc, current) => acc + (isNaN(current) ? 0 : current), 0);
   
