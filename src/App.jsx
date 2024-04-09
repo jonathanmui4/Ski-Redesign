@@ -6,6 +6,7 @@ import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/Result
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import Multi1Col from "./components/Pages/ResultsMultiFilter/Multi1Col.jsx";
+import Multi2Col from "./components/Pages/ResultsMultiFilter/Multi2Col.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import CompletionPage from "./components/Pages/CompletionPage.jsx";
 
@@ -81,12 +82,12 @@ function App() {
 
             {/* Multi Filter */}
             <Route path="/AM1/results-1" element={<Multi1Col />} />
-            {/* <Route path="/AM2/results-2" element={<ResultsPage2Column />} />
-            <Route path="/AM3/results-3" element={<ResultsPage3Column />} /> */}
+            <Route path="/AM2/results-2" element={<Multi2Col />} />
+            {/* <Route path="/AM3/results-3" element={<ResultsPage3Column />} /> */}
 
             <Route path="/CM1/results-1" element={<Multi1Col />} />
-            {/* <Route path="/CM2/results-2" element={<ResultsPage2Column />} />
-            <Route path="/CM3/results-3" element={<ResultsPage3Column />} /> */}
+            <Route path="/CM2/results-2" element={<Multi2Col />} />
+            {/* <Route path="/CM3/results-3" element={<ResultsPage3Column />} /> */}
 
             <Route path="/completionpage" element={<CompletionPage />} />
         </Routes>
