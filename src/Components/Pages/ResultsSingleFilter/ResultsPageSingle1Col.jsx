@@ -135,6 +135,7 @@ const ResultsPageSingle1Col = () => {
                         return (
                             <HorizontalCard
                                 key={index}
+                                idx={index}
                                 name={resort.name}
                                 rating={resort.rating}
                                 price={resort.price}

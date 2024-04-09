@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import styles from "./ResultCard2Column.module.css";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const ResultCard2Column = (props) => {
-    const { idx, name, rating, price, tags, imgUrl } = props;
-    const navigate = useNavigate();    
+    const { key, idx, name, rating, price, tags, imgUrl } = props;
+    const navigate = useNavigate();
     // Calculate number of full stars
     const fullStars = Math.floor(rating);
     // Check if there's a half star
@@ -16,8 +16,8 @@ const ResultCard2Column = (props) => {
 
     const ShowTaskComplete = () => {
         // Navigate to the completion page
-        navigate('/completionpage');
-    }
+        navigate("/completionpage");
+    };
 
     return (
         <div className={styles.resultCard2ColumnsameArra}>
@@ -116,13 +116,21 @@ const ResultCard2Column = (props) => {
                         </div>
                     </div>
                     {idx === 1 ? (
-                        <div className={styles.frame11} onClick={ShowTaskComplete}>
-                            <div className={styles.viewDetails}>View Details</div>
-                        </div>) 
-                        : 
-                        (<div className={styles.frame11} >
-                            <div className={styles.viewDetails}>View Details</div>
-                        </div>)}
+                        <div
+                            className={styles.frame11}
+                            onClick={ShowTaskComplete}
+                        >
+                            <div className={styles.viewDetails}>
+                                View Details
+                            </div>
+                        </div>
+                    ) : (
+                        <div className={styles.frame11}>
+                            <div className={styles.viewDetails}>
+                                View Details
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -130,6 +138,7 @@ const ResultCard2Column = (props) => {
 };
 
 ResultCard2Column.propTypes = {
+    key: PropTypes.number,
     idx: PropTypes.number,
     name: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,

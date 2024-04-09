@@ -14,19 +14,19 @@ const ResultsPage2Column = () => {
     const [clickCount, setClickCount] = useState(0);
 
     useEffect(() => {
-      const handleClick = () => {
-        setClickCount(prevCount => prevCount + 1);
-      };
-  
-      document.addEventListener('click', handleClick);
-  
-      return () => {
-        document.removeEventListener('click', handleClick);
-      };
+        const handleClick = () => {
+            setClickCount((prevCount) => prevCount + 1);
+        };
+
+        document.addEventListener("click", handleClick);
+
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
     }, []);
-  
+
     useEffect(() => {
-      sessionStorage.setItem('clicksr2', clickCount);
+        sessionStorage.setItem("clicksr2", clickCount);
     }, [clickCount]);
 
     const addFilter = (filter) => {
@@ -137,6 +137,7 @@ const ResultsPage2Column = () => {
                         console.log("Key frm page: " + index);
                         return (
                             <ResultsCard2Column
+                                key={index}
                                 idx={index}
                                 name={resort.name}
                                 rating={resort.rating}
