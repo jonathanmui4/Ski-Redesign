@@ -88,15 +88,16 @@ const ResultsPage3Column = () => {
         setFilteredAndSortedResorts(sortedResorts);
     }, [state.filters, state.priFilter, minPrice, maxPrice]);
 
-    useEffect(() => {
-        console.log("Filters: ", state.filters);
-        console.log("Primary Filter: ", state.priFilter);
-    }, [state.filters, state.priFilter]);
+    // Test States
+    // useEffect(() => {
+    //     console.log("Filters: ", state.filters);
+    //     console.log("Primary Filter: ", state.priFilter);
+    // }, [state.filters, state.priFilter]);
 
-    useEffect(() => {
-        console.log("min price: ", minPrice);
-        console.log("max price: ", maxPrice);
-    }, [minPrice, maxPrice]);
+    // useEffect(() => {
+    //     console.log("min price: ", minPrice);
+    //     console.log("max price: ", maxPrice);
+    // }, [minPrice, maxPrice]);
 
     return (
         <div className={styles.resultsPageSingle3Col}>
