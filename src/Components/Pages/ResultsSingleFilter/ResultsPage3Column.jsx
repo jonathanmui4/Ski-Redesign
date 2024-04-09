@@ -50,7 +50,9 @@ const ResultsPage3Column = () => {
     useEffect(() => {
         // Filter and sort resorts based on the applied filters
         const filteredResorts = resorts.filter((resort) => {
-            if (state.filters.length === 0) return true;
+            // if (state.filters.length === 0) return true;
+            if (resort.price < minPrice || resort.price > maxPrice)
+                return false;
             if (
                 state.filters.includes("Beginner") &&
                 !resort.tags.includes("Beginner")
@@ -109,11 +111,11 @@ const ResultsPage3Column = () => {
                             {state.priFilter && (
                                 <Slider
                                     min={0}
-                                    max={100}
+                                    max={500}
                                     onChange={({ min, max }) => {
-                                        console.log(
-                                            `min = ${min}, max = ${max}`
-                                        );
+                                        // console.log(
+                                        //     `min = ${min}, max = ${max}`
+                                        // );
                                         setMinPrice(min);
                                         setMaxPrice(max);
                                     }}
