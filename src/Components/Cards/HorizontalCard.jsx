@@ -98,7 +98,7 @@ const HorizontalCard = (props) => {
                     </div>
                 </div>
                 <div className={styles.frameWrapper}>
-                    {idx === 1 ? (
+                    {idx === 0 ? (
                         <div
                             className={styles.frame10}
                             onClick={ShowTaskComplete}

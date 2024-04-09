@@ -116,7 +116,7 @@ const ResultCard3Column = (props) => {
                             })}
                         </div>
                     </div>
-                    {idx === 1 ? (
+                    {idx === 0 ? (
                         <div
                             className={styles.frame10}
                             onClick={ShowTaskComplete}

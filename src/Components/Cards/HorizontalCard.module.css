@@ -121,6 +121,7 @@
     background-color: var(--blue-500);
     justify-content: flex-start;
     padding: var(--padding-5xs) 0;
+    cursor: pointer;
 }
 .frameWrapper {
     flex: 1;
