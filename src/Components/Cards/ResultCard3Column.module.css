@@ -115,6 +115,7 @@
     font-size: var(--button-medium-size);
     color: var(--white);
     cursor: pointer;
+    max-width: 80%; /* Adjust the value as needed */
 }
 .frameParent {
     gap: var(--gap-5xl);
