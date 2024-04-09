@@ -1,0 +1,145 @@
+.frame {
+    align-self: stretch;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 224px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.div {
+    width: 100%;
+    left: 0;
+    line-height: 20px;
+    display: inline-block;
+}
+.frame3 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.frame2 {
+    width: 304px;
+    position: relative;
+    height: 24px;
+}
+.alpineDreamsResort {
+    position: relative;
+    line-height: 28px;
+    font-weight: 600;
+}
+.frame4 {
+    width: 303px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-100);
+}
+.startingFrom299 {
+    position: relative;
+    line-height: 24px;
+}
+.frame5 {
+    width: 303px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--button-medium-size);
+}
+.tagLabel {
+    position: relative;
+    line-height: 16px;
+    font-weight: 500;
+}
+.beginnerTag,
+.ecoTag,
+.parkingTag {
+    border-radius: var(--br-9980xl);
+    background-color: var(--color-cornflowerblue-100);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-9xs) var(--padding-xs);
+}
+.ecoTag,
+.parkingTag {
+    background-color: var(--color-mediumseagreen);
+}
+.parkingTag {
+    background-color: var(--color-darkorange);
+    padding: var(--padding-9xs) var(--padding-2xs);
+}
+.frame6,
+.frameGroup {
+    display: flex;
+    justify-content: flex-start;
+}
+.frame6 {
+    width: 303px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 var(--padding-12xs);
+    box-sizing: border-box;
+    gap: var(--gap-4xs);
+    font-size: var(--font-size-xs);
+    color: var(--white);
+}
+.frameGroup {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--gap-5xs);
+}
+.frame10,
+.viewDetails {
+    display: flex;
+    justify-content: center;
+}
+.viewDetails {
+    width: 86px;
+    position: relative;
+    line-height: 24px;
+    align-items: center;
+    flex-shrink: 0;
+}
+.frame10 {
+    align-self: stretch;
+    border-radius: var(--br-9xs);
+    background-color: var(--blue-500);
+    flex-direction: row;
+    align-items: flex-end;
+    padding: var(--padding-5xs) 0;
+    text-align: center;
+    font-size: var(--button-medium-size);
+    color: var(--white);
+    cursor: pointer;
+    max-width: 80%; /* Adjust the value as needed */
+}
+.frameParent {
+    gap: var(--gap-5xl);
+}
+.frame1,
+.frameParent,
+.resultCard3Column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.frame1 {
+    align-self: stretch;
+    padding: var(--padding-base);
+}
+.resultCard3Column {
+    border-radius: var(--br-5xs);
+    background-color: var(--white);
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 0 0#000, 0 0 0#000;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--color-dimgray-100);
+    font-family: var(--body-1);
+}
