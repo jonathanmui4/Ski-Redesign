@@ -32,7 +32,7 @@ const Multi1Col = () => {
         const filteredResorts = resorts.filter((resort) => {
             if (state.filters.length === 0) return true;
             if (
-                state.filters.includes("Beginner") &&
+                state.filters.includes("For Beginners") &&
                 !resort.tags.includes("Beginner")
             )
                 return false;

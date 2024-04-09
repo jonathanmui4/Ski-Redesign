@@ -50,7 +50,7 @@ const Multi3Col = () => {
             if (resort.price < minPrice || resort.price > maxPrice)
                 return false;
             if (
-                state.filters.includes("Beginner") &&
+                state.filters.includes("For Beginners") &&
                 !resort.tags.includes("Beginner")
             )
                 return false;
