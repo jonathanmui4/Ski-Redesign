@@ -7,6 +7,7 @@ import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPa
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
 import Multi1Col from "./components/Pages/ResultsMultiFilter/Multi1Col.jsx";
 import Multi2Col from "./components/Pages/ResultsMultiFilter/Multi2Col.jsx";
+import Multi3Col from "./components/Pages/ResultsMultiFilter/Multi3Col.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import CompletionPage from "./components/Pages/CompletionPage.jsx";
 
@@ -57,18 +58,18 @@ function App() {
             <Route path="/CS2/home" element={<HomeCentralised />} />
             <Route path="/CS3/home" element={<HomeCentralised />} />
 
-            {/* <Route path="/CM1/home" element={<HomeCentralised />} />
+            <Route path="/CM1/home" element={<HomeCentralised />} />
             <Route path="/CM2/home" element={<HomeCentralised />} />
-            <Route path="/CM3/home" element={<HomeCentralised />} /> */}
+            <Route path="/CM3/home" element={<HomeCentralised />} />
 
             {/* Asymmetrical */}
             <Route path="/AS1/home" element={<HomeAsymmetrical />} />
             <Route path="/AS2/home" element={<HomeAsymmetrical />} />
             <Route path="/AS3/home" element={<HomeAsymmetrical />} />
 
-            {/* <Route path="/AM1/home" element={<HomeAsymmetrical />} />
+            <Route path="/AM1/home" element={<HomeAsymmetrical />} />
             <Route path="/AM2/home" element={<HomeAsymmetrical />} />
-            <Route path="/AM3/home" element={<HomeAsymmetrical />} />  */}
+            <Route path="/AM3/home" element={<HomeAsymmetrical />} />
 
             {/* Results Page */}
             {/* Single Dropdown */}
@@ -83,11 +84,11 @@ function App() {
             {/* Multi Filter */}
             <Route path="/AM1/results-1" element={<Multi1Col />} />
             <Route path="/AM2/results-2" element={<Multi2Col />} />
-            {/* <Route path="/AM3/results-3" element={<ResultsPage3Column />} /> */}
+            <Route path="/AM3/results-3" element={<Multi3Col />} />
 
             <Route path="/CM1/results-1" element={<Multi1Col />} />
             <Route path="/CM2/results-2" element={<Multi2Col />} />
-            {/* <Route path="/CM3/results-3" element={<ResultsPage3Column />} /> */}
+            <Route path="/CM3/results-3" element={<Multi3Col />} />
 
             <Route path="/completionpage" element={<CompletionPage />} />
         </Routes>
