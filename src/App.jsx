@@ -14,21 +14,6 @@ import CompletionPage from "./components/Pages/CompletionPage.jsx";
 function App() {
     const location = useLocation(); // This hook gives you the current location
 
-    // const [clickCount, setClickCount] = useState(0);
-
-    // // Event listener to track mouse clicks
-    // const handleClick = () => {
-    //   setClickCount(prevCount => prevCount + 1);
-    // };
-
-    // // Attach event listener when the component mounts
-    // useEffect(() => {
-    //   document.addEventListener('click', handleClick);
-    //   return () => {
-    //     document.removeEventListener('click', handleClick);
-    //   };
-    // }, []);
-
     useEffect(() => {
         const startTime = Date.now();
         sessionStorage.setItem("startTime", startTime);
