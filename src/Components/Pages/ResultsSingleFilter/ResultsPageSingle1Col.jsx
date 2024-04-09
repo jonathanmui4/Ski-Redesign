@@ -1,5 +1,5 @@
 import React, { useReducer, useState, useEffect } from "react";
-import ResultCard1ColumndiffArra from "../../Cards/ResultCard1ColumndiffArra";
+import HorizontalCard from "../../Cards/HorizontalCard";
 import AdditionalFilters from "../../Filters/AdditionalFilters";
 import FilterDropdown from "../../Filters/FilterDropdown";
 import Slider from "../../Filters/Slider";
@@ -14,19 +14,19 @@ const ResultsPageSingle1Col = () => {
     const [clickCount, setClickCount] = useState(0);
 
     useEffect(() => {
-      const handleClick = () => {
-        setClickCount(prevCount => prevCount + 1);
-      };
-  
-      document.addEventListener('click', handleClick);
-  
-      return () => {
-        document.removeEventListener('click', handleClick);
-      };
+        const handleClick = () => {
+            setClickCount((prevCount) => prevCount + 1);
+        };
+
+        document.addEventListener("click", handleClick);
+
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
     }, []);
-  
+
     useEffect(() => {
-      sessionStorage.setItem('clicksr1', clickCount);
+        sessionStorage.setItem("clicksr1", clickCount);
     }, [clickCount]);
 
     const addFilter = (filter) => {
@@ -133,8 +133,8 @@ const ResultsPageSingle1Col = () => {
                 <div className={styles.cards}>
                     {filteredAndSortedResorts.map((resort, index) => {
                         return (
-                            <ResultCard1ColumndiffArra
-                                idx={index}
+                            <HorizontalCard
+                                key={index}
                                 name={resort.name}
                                 rating={resort.rating}
                                 price={resort.price}
