@@ -5,6 +5,7 @@ import HomeAsymmetrical from "./components/Pages/HomePage2/AsymmetricalHomePage.
 import ResultsPageSingle1Col from "./components/Pages/ResultsSingleFilter/ResultsPageSingle1Col.jsx";
 import ResultsPage2Column from "./components/Pages/ResultsSingleFilter/ResultsPage2Column.jsx";
 import ResultsPage3Column from "./components/Pages/ResultsSingleFilter/ResultsPage3Column.jsx";
+import Multi1Col from "./components/Pages/ResultsMultiFilter/Multi1Col.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import CompletionPage from "./components/Pages/CompletionPage.jsx";
 
@@ -17,7 +18,7 @@ function App() {
     // const handleClick = () => {
     //   setClickCount(prevCount => prevCount + 1);
     // };
-  
+
     // // Attach event listener when the component mounts
     // useEffect(() => {
     //   document.addEventListener('click', handleClick);
@@ -28,13 +29,15 @@ function App() {
 
     useEffect(() => {
         const startTime = Date.now();
-        sessionStorage.setItem('startTime', startTime);
-        console.log('Page loading started at:', startTime);
+        sessionStorage.setItem("startTime", startTime);
+        console.log("Page loading started at:", startTime);
 
         return () => {
             const endTime = Date.now();
             const duration = endTime - startTime;
-            console.log(`User spent ${duration} ms before navigating away or reloading.`);
+            console.log(
+                `User spent ${duration} ms before navigating away or reloading.`
+            );
             // Here you could also send this data to an analytics endpoint
         };
     }, []); // Empty dependency array means this effect runs once on mount
@@ -77,12 +80,12 @@ function App() {
             <Route path="/CS3/results-3" element={<ResultsPage3Column />} />
 
             {/* Multi Filter */}
-            {/* <Route path="/AM1/results-1" element={<ResultsPageSingle1Col />} />
-            <Route path="/AM2/results-2" element={<ResultsPage2Column />} />
-            <Route path="/AM3/results-3" element={<ResultsPage3Column />} />
+            <Route path="/AM1/results-1" element={<Multi1Col />} />
+            {/* <Route path="/AM2/results-2" element={<ResultsPage2Column />} />
+            <Route path="/AM3/results-3" element={<ResultsPage3Column />} /> */}
 
-            <Route path="/CM1/results-1" element={<ResultsPageSingle1Col />} />
-            <Route path="/CM2/results-2" element={<ResultsPage2Column />} />
+            <Route path="/CM1/results-1" element={<Multi1Col />} />
+            {/* <Route path="/CM2/results-2" element={<ResultsPage2Column />} />
             <Route path="/CM3/results-3" element={<ResultsPage3Column />} /> */}
 
             <Route path="/completionpage" element={<CompletionPage />} />

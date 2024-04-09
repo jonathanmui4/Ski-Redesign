@@ -12,7 +12,7 @@ const HorizontalCard = (props) => {
     // Check if there's a half star
     const hasHalfStar = rating - fullStars >= 0.5;
 
-    console.log("Key: " + idx);
+    // console.log("Key: " + idx);
 
     const ShowTaskComplete = () => {
         // Navigate to the completion page
@@ -50,7 +50,7 @@ const HorizontalCard = (props) => {
                             ))}
                         </div>
                         <div className={styles.frame3}>
-                            <div className={styles.div}>(4.5)</div>
+                            <div className={styles.div}>({rating})</div>
                         </div>
                     </div>
                     <div className={styles.frame4}>

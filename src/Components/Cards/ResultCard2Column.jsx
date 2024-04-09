@@ -12,7 +12,7 @@ const ResultCard2Column = (props) => {
     // Check if there's a half star
     const hasHalfStar = rating - fullStars >= 0.5;
 
-    console.log("Key: " + idx);
+    // console.log("Key: " + idx);
 
     const ShowTaskComplete = () => {
         // Navigate to the completion page

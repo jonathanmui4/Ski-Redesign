@@ -4,7 +4,7 @@ import { FiPlus } from "react-icons/fi";
 import PropTypes from "prop-types";
 import styles from "./FilterButtons.module.css";
 
-const FilterButtons = ({ text, addFilter, removeFilter }) => {
+const FilterButtons = ({ text, addFilter, removeFilter, setActive }) => {
     const [buttonClicked, setButtonClicked] = useState(false);
     return (
         <div
@@ -12,6 +12,7 @@ const FilterButtons = ({ text, addFilter, removeFilter }) => {
             onClick={() => {
                 setButtonClicked(!buttonClicked);
                 buttonClicked ? removeFilter(text) : addFilter(text);
+                setActive && setActive(!buttonClicked);
             }}
         >
             <div className={styles.icons}>
@@ -26,6 +27,7 @@ FilterButtons.propTypes = {
     text: PropTypes.string.isRequired,
     addFilter: PropTypes.func.isRequired,
     removeFilter: PropTypes.func.isRequired,
+    setActive: PropTypes.func,
 };
 
 export default FilterButtons;
